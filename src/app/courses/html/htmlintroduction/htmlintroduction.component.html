@@ -1,1 +1,25 @@
-<app-vertnav></app-vertnav>
+
+<!-- w-52 xl:w-60  -->
+<section [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+   <div>
+       <ul class="flex justify-center gap-2 py-2 font-medium sm:gap-5 ">
+           <li><a [routerLink]="['/courses/html/htmlintro']">HTML</a></li>
+           <li>CSS</li>
+           <li>TailwindCSS</li>
+           <li>JavaScript</li>
+           <li>React</li>
+       </ul>
+       <hr class="h-[2px] md:hidden" [ngClass]="isDark ? 'bg-white' : 'bg-black'">
+   </div>    
+</section>
+<hr class="h-2" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+
+<section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+   <div class="hidden md:inline-block">
+      <app-vertnav></app-vertnav>
+   </div> 
+
+    <div>
+      <h1 class="font-black text-2xl p-3">HTML Introduction</h1>
+    </div>
+</section>

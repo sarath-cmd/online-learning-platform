@@ -19,7 +19,6 @@ export class HtmlComponent {
     });
   }
   menuOpen = false;
-
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }

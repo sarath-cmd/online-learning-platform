@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DarkthemeService } from '../../../darktheme.service';
+import { MobilemenuService } from '../../mobilemenu.service';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet, RouterLink } from '@angular/router';
 
@@ -12,10 +13,14 @@ import { RouterOutlet, RouterLink } from '@angular/router';
 })
 export class VertnavComponent {
   isDark: boolean = false;
-  constructor(private themeService: DarkthemeService) {}
+  ismenuo = false
+  constructor(private themeService: DarkthemeService, private menuService: MobilemenuService) {}
   ngOnInit() {
     this.themeService.isDark$.subscribe(isDark => {
       this.isDark = isDark;
+    });
+    this.menuService.ismenuo$.subscribe(ismenuo => {
+      this.ismenuo = ismenuo;
     });
   }
 }

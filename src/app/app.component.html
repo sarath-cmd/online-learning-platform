@@ -30,8 +30,18 @@
     }
 </header>
 <hr class="h-[0.5vh] bg-white blur-2xl">
+<hr class="h-2" [ngClass]="isDark ? 'hidden' : 'bg-black'">
+<section [ngClass]="!menuOpen ? 'inline-block' : 'hidden'"  [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <div>
+        <ul class="flex justify-center gap-2 py-2 font-medium sm:gap-5 ">
+            <li><a [routerLink]="['/courses/html/htmlintro']">HTML</a></li>
+            <li>CSS</li>
+            <li>TailwindCSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+        </ul>
+    </div>
+</section>
+<hr class="h-2" [ngClass]="isDark ? 'hidden' : 'bg-black'">
+<hr class="h-[0.5vh] bg-white blur-2xl">
 <router-outlet></router-outlet>
-<footer class="flex py-5" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
-    <img src="images/user.jpeg" class="w-14 rounded-full px-3">
-    <h1 class="fonr-black text-2xl my-auto">Learn With Me</h1>
-</footer>

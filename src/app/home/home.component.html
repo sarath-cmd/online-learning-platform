@@ -1,0 +1,88 @@
+<section [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <div class="grid grid-cols-1 md:grid-cols-2 p-5" >
+        <div class="hidden md:block pl-5 pt-5 lg:pl-16 lg:pt-16 xl:pl-10 xl:pt-10 2xl:pl-16 2xl:pt-16">
+            <img src="images/hero.png" class="w-[75%]" />
+        </div>
+        <div class="mt-10 lg:mt-14 xl:mt-20 2xl:mt-24">
+            <h1 class="font-black text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl flex justify-center">Welcome to <span class="text-fuchsia-500 pl-2">LearnWithMe</span></h1>
+            <p class="mt-5 p-10 text-lg md:mt-0 md:p-5 lg:text-xl lg:p-10 xl:text-2xl 2xl:text-3xl 2xl:p-14 font-SUSE">
+                Learn web development through easy-to-follow text guides and hands-on coding exercises.
+                Our platform provides a distraction-free learning environment, allowing you to focus on building a solid foundation in web development at your own pace.
+                No videos, just pure learning. Start building your skills today!
+            </p>
+            <a routerLink="courses" class="inline-block">
+                <button class="flex gap-2 p-2 rounded-xl mb-5 ml-9 md:ml-5 lg:p-3 lg:ml-9 xl:p-5 2xl:ml-14 font-bold hover:shadow-xl hover:shadow-purple-900" [ngClass]="isDark ? 'bg-purple-400 text-black' : 'text-white bg-gray-800'" >
+                     Start Learning
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
+                    </span>
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="xl:py-5">
+        <h1 class="flex justify-center font-bold p-5 text-2xl">Recommended<span class="text-fuchsia-500 pl-2">Courses</span></h1>
+        <div class="mx-10 sm:flex sm:justify-between md:justify-center xl:gap-32 gap-5 lg:gap-10">
+            <div class="sm:w-[366px] my-5 w-full rounded-xl pb-5" [ngClass]="isDark ? 'dark:text-white dark:bg-slate-900' : 'bg-slate-300 text-black'">
+                <img src="images/HTML.jpeg" class="rounded-t-xl">
+                <p class="text-gray-600 mt-3 pl-3">FREE COURSE</p>
+                <h1 class="font-semibold text-xl pl-4 ">HTML</h1>
+                <p class="p-5">
+                    HTML is the backbone of web development, providing the structure and layout for web pages.
+                    It's incredibly straightforward to learn and master, making it an essential skill for any aspiring web developer.
+                </p>
+                <a class="inline-block">
+                    <button class="flex gap-2 mx-2 sm:ml-4  p-2 rounded-xl hover:shadow-lg hover:shadow-purple-900" [ngClass]="isDark ? 'bg-purple-400 text-black' : 'text-white bg-gray-800'" >
+                        Start Learning
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                            </svg>                          
+                        </span>
+                    </button>
+                </a>
+            </div>
+            <div class="sm:w-[366px] my-5 w-full rounded-xl pb-5" [ngClass]="isDark ? 'dark:text-white dark:bg-slate-900' : 'bg-slate-300 text-black'">
+                <img src="images/css.jpeg" class="rounded-t-xl">
+                <p class="text-gray-600 mt-3 pl-3">FREE COURSE</p>
+                <h1 class="font-semibold text-xl pl-4 ">CSS</h1>
+                <p class="p-5">
+                    CSS is the styling language that brings web pages to life, allowing you to create visually appealing and responsive designs.
+                    It's both powerful and easy to learn, making it an essential tool for any web developer. 
+                </p>
+                <a class="inline-block">
+                    <button class="flex gap-2 mx-2 sm:ml-4  p-2 rounded-xl hover:shadow-lg hover:shadow-purple-900" [ngClass]="isDark ? 'bg-purple-400 text-black' : 'text-white bg-gray-800'" >
+                        Start Learning
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                            </svg>                          
+                        </span>
+                    </button>
+                </a>
+            </div>
+            <div class="sm:w-[366px] my-5 w-full rounded-xl pb-5" [ngClass]="isDark ? 'dark:text-white dark:bg-slate-900' : 'bg-slate-300 text-black'">
+                <img src="images/tailwind.jpeg" class="rounded-t-xl">
+                <p class="text-gray-600 mt-3 pl-3">FREE COURSE</p>
+                <h1 class="font-semibold text-xl pl-4 ">TailwindCSS</h1>
+                <p class="p-5">
+                    Tailwind CSS is a utility-first CSS framework that allows you to build modern, responsive designs quickly and efficiently.
+                    It's powerful yet easy to learn, making it an essential tool for any web developer. 
+                </p>
+                <a class="inline-block">
+                    <button class="flex gap-2 mx-2 sm:ml-4  p-2 rounded-xl hover:shadow-lg hover:shadow-purple-900" [ngClass]="isDark ? 'bg-purple-400 text-black' : 'text-white bg-gray-800'" >
+                        Start Learning
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                            </svg>                          
+                        </span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

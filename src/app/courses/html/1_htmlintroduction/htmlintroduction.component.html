@@ -1,0 +1,72 @@
+<section class="flex md:hidden" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <p class="flex pr-3">Course Menu:</p>
+    <button (click)="mest()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+        </svg>              
+    </button>
+</section>
+<section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <app-vertnav></app-vertnav>
+    <div *ngIf="!ismenuo" class="pl-3 pt-3 border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl py-3 text-purple-500">HTML Introduction</h1>
+        <p class="px-3 py-3 2xl:text-lg">
+            HTML (HyperText Markup Language) was created by Tim Berners-Lee in 1991 as a standard for creating web pages. 
+            It's a markup language used to structure content on the web, defining elements like headings, paragraphs, links, and images. 
+            HTML forms the backbone of web content. In layman's terms, HTML is like the skeleton of a website.
+        </p>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl py-3 text-purple-500">Features of HTML</h1>
+        <ul class="list-disc pl-8 py-3 2xl:text-lg">
+            <li>It is platform-independent. For example, Chrome displays the same pages identically across different operating systems such as Mac, Linux, and Windows.</li>
+            <li>Images, videos, and audio can be added to a web page (For example - YouTube shows videos on their website)</li>
+            <li>HTML is a markup language and not a programming language.</li>
+            <li>It can be integrated with other languages like CSS, JavaScript, etc. to show interactive (or dynamic) web pages</li>
+        </ul>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl py-3 text-purple-500">A analogy to understand HTML, CSS, and JavaScript:</h1>
+        <img src="images/HTML/difference.png" class="xl:px-28 py-3">
+        <p class="px-3 py-3 2xl:text-lg">
+            In building a webpage, think of HTML, CSS, and JavaScript as different parts of a car. 
+            HTML is like the car's skeleton, forming the basic structure and frame. CSS adds the paint and finishing touches, making the car look appealing with color, 
+            style, and design. JavaScript is similar to the engine and mechanical parts, infusing the car with functionality, movement, and interactive features. 
+            Similarly, when developing a website, HTML lays out the structure, CSS enhances its visual appeal, and JavaScript provides interactivity and dynamic content.
+        </p>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl py-3 text-purple-500">A Simple HTML Document:</h1>
+        <div [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 relative">
+            <pre class="p-5">{{ codes }}</pre>
+            <button [cdkCopyToClipboard]="codes" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <h1 class="font-medium sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl py-3 text-purple-500">Example Explained</h1>
+        <ul class="list-disc pl-8 py-3 2xl:text-lg">
+            <li>The DOCTYPE line declaration defines that this document is an HTML5 document</li>
+            <li>The html line defines that the element is the root element of an HTML page</li>
+            <li>The head element contains meta information about the HTML page</li>
+            <li>The title element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)</li>
+            <li>The body element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.</li>
+            <li>The h1 element defines a large heading</li>
+            <li>The p element defines a paragraph</li>
+        </ul>
+        <p class="px-3 py-3 2xl:text-lg">
+            We will learn about this tags later for now just know that the elements in the head will not be displayed to the user and the title present in the head will be displayed in the browser's title bar or in the page's tab. Whereas all the tags and data present in the body will be displayed in the browser.
+        </p>
+        <h1 class="font-medium sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl py-3 text-purple-500">HTML Page structure:</h1>
+        <img src="images/HTML/htmlpagestructure.png">
+        <div class="flex justify-between mx-5 my-10">
+            <a>
+                <button disabled class="flex p-2 hover:cursor-not-allowed" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                    Previous
+                </button>
+            </a>
+            <a [routerLink]="['/courses/html/htmlexecution']">
+                <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    Next
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>                  
+                </button>
+            </a>
+        </div>
+    </div>
+</section>

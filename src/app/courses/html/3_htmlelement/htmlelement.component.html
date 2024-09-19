@@ -1,0 +1,64 @@
+<section class="flex md:hidden" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <p class="flex pr-3">Course Menu:</p>
+    <button (click)="mest()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+        </svg>              
+    </button>
+</section>
+<section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <app-vertnav></app-vertnav>
+    <div *ngIf="!ismenuo" class="pl-3 py-3 w-full border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl py-3 text-purple-500">HTML Elements</h1>
+        <p class="px-3 2xl:text-lg">
+            An HTML element is defined by a start tag, some content, and an end tag. Some HTML elements have no content (like the < br> element). These elements are called empty elements. Empty elements do not have an end tag!
+        </p>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">HTML Tags vs. Elements</h1>
+        <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">HTML Tags</h2>
+        <p class="px-3 2xl:text-lg">HTML tags are the markers that define the start and end of an element. They are wrapped in angle brackets, like < p> and < /p>.</p>
+        <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">HTML Elements</h2>
+        <p class="px-3 2xl:text-lg">
+            An HTML element includes an opening tag, content, and a closing tag, forming a complete set. For example, < p>This is a paragraph.< /p>.<br>
+            <span class="font-bold">HTML Element = Start Tag + Content + End Tag</span>
+        </p>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">What is a Nested HTML Element?</h1>
+        <p class="px-3 2xl:text-lg">
+            A nested HTML element is an HTML structure where one element is placed inside another element. 
+            The enclosing element is often referred to as the "parent," while the enclosed element is called the "child." <br>
+            <span class="font-bold">Nested HTML Element = One HTML Element Inside Another HTML Element</span><br>
+            For example:
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 relative">
+            <pre class="p-5">{{codes}}</pre>
+            <button [cdkCopyToClipboard]="codes" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <p class="px-3 2xl:text-lg">
+            In this example, the < b> element (child) is nested inside the < h1> element (parent).
+        </p>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Key Takeaways</h1>
+        <ul class="list-disc px-8 2xl:text-lg">
+            <li>Tags set boundaries; elements include tags plus content.</li>
+            <li>Tags come in pairs (most of the time), whereas elements may include nested elements.</li>
+            <li>Self-closing or void elements like < br /> are still considered elements, even though they don't have a closing tag or content.</li>
+            <li>Elements can be "parent" or "child" when nested, but tags cannot.</li>
+        </ul>
+        <div class="flex justify-between mx-5 my-10">
+            <a [routerLink]="['/courses/html/htmlexecution']">
+                <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                    Previous
+                </button>
+            </a>
+            <a [routerLink]="['/courses/html/htmlattributes']">
+                <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    Next
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>                  
+                </button>
+            </a>
+        </div>
+    </div>
+</section>

@@ -4,15 +4,16 @@ import { MobilemenuService } from '../../mobilemenu.service';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { VertnavComponent } from '../vertnav/vertnav.component';
+import { ClipboardModule } from '@angular/cdk/clipboard';
 
 @Component({
-  selector: 'app-htmlintroduction',
+  selector: 'app-htmlelement',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink, VertnavComponent],
-  templateUrl: './htmlintroduction.component.html',
-  styleUrl: './htmlintroduction.component.css'
+  imports: [CommonModule, RouterOutlet, RouterLink, VertnavComponent, ClipboardModule],
+  templateUrl: './htmlelement.component.html',
+  styleUrl: './htmlelement.component.css'
 })
-export class HtmlintroductionComponent {
+export class HtmlelementComponent {
   isDark: boolean = false;
   ismenuo = false
   constructor(private themeService: DarkthemeService, private menuService: MobilemenuService) {}
@@ -24,8 +25,8 @@ export class HtmlintroductionComponent {
       this.ismenuo = ismenuo;
     });
   }
-  
   mest() {
     this.menuService.cms();
   }
+  codes = `<h1><b>This is our first heading</b></h1>`
 }

@@ -2,19 +2,22 @@
     <div class="md:hidden w-full" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
         <h1 class="mt-1 font-medium">Introduction</h1>
         <ul>
-            <li class="p-2"><a [routerLink]="['courses/html/htmlintro']">->HTML Introduction</a></li>
+            <li class="p-2"><a [routerLink]="['/courses/html/htmlintro']">->HTML Introduction</a></li>
+            <li class="p-2"><a [routerLink]="['/courses/html/htmlexecution']">->HTML Execution</a></li>
+            <li class="p-2"><a [routerLink]="['/courses/html/htmlelement']">->HTML Element</a></li>
+            <li class="p-2"><a [routerLink]="['/courses/html/htmlattributes']">->HTML Attributes</a></li>
         </ul>
     </div>
 }
 
 <section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
-    <div class="hidden md:block w-52 xl:w-60 border-r-2" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)] border-gray-300' : 'bg-white text-black border-gray-700'">
+    <div class="hidden md:block w-52 xl:w-60" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
         <h1 class="pl-3 font-bold">Introduction:</h1>
         <ul>
             <li><a class="py-2 pl-5" [routerLink]="['/courses/html/htmlintro']">->HTML Introduction</a></li>
-            <li><a class="py-2 pl-5" routerLink="">->Page Structure</a></li>
-            <li><a class="py-2 pl-5" routerLink="">->Basic Tags</a></li>
-            <li><a class="py-2 pl-5" routerLink="">->Hello World</a></li>
+            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/htmlexecution']">->HTML Execution</a></li>
+            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/htmlelement']">->HTML Element</a></li>
+            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/htmlattributes']">->HTML Attributes</a></li>
         </ul>
     </div>
 </section>

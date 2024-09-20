@@ -1,0 +1,76 @@
+<section class="flex md:hidden" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <p class="flex pr-3">Course Menu:</p>
+    <button (click)="mest()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+        </svg>              
+    </button>
+</section>
+<section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <app-vertnav></app-vertnav>
+    <div *ngIf="!ismenuo" class="pl-3 py-3 w-full border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">HTML Id & Classes</h1>
+        <p class="px-3 2xl:text-lg">
+            HTML offers multiple ways to select and style elements. 
+            Two of the most commonly used selectors are IDs and Classes. 
+        </p>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">What is an ID?</h1>
+        <p class="px-3 2xl:text-lg">
+            An ID is an attribute, a unique identifier assigned to only one HTML element within a page. 
+            That is if we have used a value as an id then that same name (or value) should not be used again(should not repeat) in that html file. 
+            It is often used for unique styling and JavaScript manipulations.
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 relative">
+            <pre class="p-5">{{ code1 }}</pre>
+            <button [cdkCopyToClipboard]="code1" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">What are Classes?</h1>
+        <p class="px-3 2xl:text-lg">
+            The class attribute lets you give the same name to multiple HTML elements. 
+            That way, you can easily change their look or behavior all at once. 
+            Classes are not unique and can be assigned to multiple elements. 
+            They are generally used for applying the same styles or behaviors to a group of elements.
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 relative">
+            <pre class="p-5">{{ code2 }}</pre>
+            <button [cdkCopyToClipboard]="code2" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">Using IDs and Classes in CSS</h2>
+        <p class="px-3 2xl:text-lg">
+            In CSS, elements with IDs are selected using a hash (#) symbol before the ID, and elements with classes are selected using a dot (.) before the class name.
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 relative">
+            <pre class="p-5">{{ code3 }}</pre>
+            <button [cdkCopyToClipboard]="code3" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Differences Between IDs and Classes</h1>
+        <ul class="list-disc px-8 2xl:text-lg">
+            <li><b>Uniqueness: </b>IDs are unique, and classes can be reused.</li>
+            <li><b>JavaScript: </b>IDs are often used for JavaScript operations.</li>
+            <li><b>Styling: </b>Both can be used for styling, but IDs have higher specificity.</li>
+        </ul>
+        <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">Conclusion</h2>
+        <p class="px-3 2xl:text-lg">
+            Understanding the difference between IDs and Classes is crucial for effective web development. 
+            While IDs are for unique elements, classes are for grouping elements.
+        </p>
+        <div class="flex justify-between mx-5 my-10">
+            <a [routerLink]="['/courses/html/htmlcomments']">
+                <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                    Previous
+                </button>
+            </a>
+            <a [routerLink]="['/courses/html/htmlheadingtag']">
+                <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    Next
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>                  
+                </button>
+            </a>
+        </div>
+    </div>
+</section>

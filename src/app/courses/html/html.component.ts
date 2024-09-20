@@ -8,7 +8,6 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterOutlet, RouterLink],
   templateUrl: './html.component.html',
-  styleUrl: './html.component.css'
 })
 export class HtmlComponent {
   isDark: boolean = false;

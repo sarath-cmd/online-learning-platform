@@ -42,6 +42,11 @@
             <li>Self-closing or void elements like < br /> are still considered elements, even though they don't have a closing tag or content.</li>
             <li>Elements can be "parent" or "child" when nested, but tags cannot.</li>
         </ul>
+        <p class="px-3 2xl:text-lg">
+            If you are complete beginner and reading html for the first time we recommand you to read the <a class="text-blue-700" [routerLink]="['/courses/html/htmlheadingtag']">Basic tags</a> and you can contine with the next headings.
+            If you have already know some basic about the html you can continue your reading by pressinh the next button. 
+        </p>
+
         <div class="flex justify-between mx-5 my-10">
             <a [routerLink]="['/courses/html/htmlexecution']">
                 <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">

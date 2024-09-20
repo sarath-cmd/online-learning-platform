@@ -1,0 +1,31 @@
+<section class="flex md:hidden" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <p class="flex pr-3">Course Menu:</p>
+    <button (click)="mest()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+        </svg>              
+    </button>
+</section>
+<section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <app-vertnav></app-vertnav>
+    <div *ngIf="!ismenuo" class="pl-3 py-3 w-full border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
+        <!-- <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Heading Tags</h1> -->
+        <!-- <p class="px-3 2xl:text-lg">
+            In HTML, heading tags ranging from h1 to h6 are used to define the structure and layout of text on a web page. 
+            These tags help create a hierarchical organization of content, making it easier for both users and search engines to understand the page's content.
+        </p> -->
+        <!-- <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 relative"></div>
+            <pre class="p-5">{{ code1 }}</pre>
+            <button [cdkCopyToClipboard]="code1" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div> -->
+        <!-- <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">< h2> Tag: Second-Level Heading</h2> -->
+        <!-- <ul class="list-disc px-8 2xl:text-lg">
+            <li><b>h1 Tag: </b>Used for the main title of the page; largest and most prominent heading.</li>
+            <li><b>h2 Tag: </b>Used for major section headings; smaller than h1 but still quite prominent.</li>
+            <li><b>h3 Tag: </b>Used for sub-sections within an h2 section; smaller than h2 but larger than h4.</li>
+            <li><b>h4 Tag: </b>Often used for headings within an h3 section; useful for further breaking down content.</li>
+            <li><b>h5 Tag: </b>Rarely used; suitable for deeply nested sections or less important headings.</li>
+            <li><b>h6 Tag: </b>The smallest heading tag; used for very specific or minor headings, rarely seen in general usage.</li>
+        </ul> -->
+    </div>
+</section>  

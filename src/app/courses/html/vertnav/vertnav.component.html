@@ -6,18 +6,32 @@
             <li class="p-2"><a [routerLink]="['/courses/html/htmlexecution']">->HTML Execution</a></li>
             <li class="p-2"><a [routerLink]="['/courses/html/htmlelement']">->HTML Element</a></li>
             <li class="p-2"><a [routerLink]="['/courses/html/htmlattributes']">->HTML Attributes</a></li>
+            <li class="p-2"><a [routerLink]="['/courses/html/htmlcomments']">->HTML Comments</a></li>
+            <li class="p-2"><a [routerLink]="['/courses/html/htmlidandclass']">->HTML Id and Class</a></li>
+        </ul>
+        <h1 class="mt-1 font-medium">HTML BASIC TAGS</h1>
+        <ul>
+            <li class="p-2"><a [routerLink]="['/courses/html/htmlheadingtag']">->Heading Tags</a></li>
+            <li class="p-2"><a [routerLink]="['/courses/html/htmlparagraphtag']">->Paragraph Tags</a></li>
         </ul>
     </div>
 }
 
 <section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
     <div class="hidden md:block w-52 xl:w-60" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
-        <h1 class="pl-3 font-bold">Introduction:</h1>
+        <h1 class="pl-3 font-bold">Introduction</h1>
         <ul>
             <li><a class="py-2 pl-5" [routerLink]="['/courses/html/htmlintro']">->HTML Introduction</a></li>
             <li><a class="py-2 pl-5" [routerLink]="['/courses/html/htmlexecution']">->HTML Execution</a></li>
             <li><a class="py-2 pl-5" [routerLink]="['/courses/html/htmlelement']">->HTML Element</a></li>
             <li><a class="py-2 pl-5" [routerLink]="['/courses/html/htmlattributes']">->HTML Attributes</a></li>
+            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/htmlcomments']">->HTML Comments</a></li>
+            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/htmlidandclass']">->HTML Id and Class</a></li>
+        </ul>
+        <h1 class="pl-3 font-bold pt-5">HTML BASIC TAGS</h1>
+        <ul>
+            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/htmlheadingtag']">->Heading Tags</a></li>
+            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/htmlparagraphtag']">->Paragraph Tags</a></li>
         </ul>
     </div>
 </section>

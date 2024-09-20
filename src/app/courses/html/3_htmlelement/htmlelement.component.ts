@@ -11,7 +11,6 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
   standalone: true,
   imports: [CommonModule, RouterOutlet, RouterLink, VertnavComponent, ClipboardModule],
   templateUrl: './htmlelement.component.html',
-  styleUrl: './htmlelement.component.css'
 })
 export class HtmlelementComponent {
   isDark: boolean = false;

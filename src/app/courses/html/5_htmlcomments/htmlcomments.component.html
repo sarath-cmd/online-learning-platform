@@ -1,0 +1,70 @@
+<section class="flex md:hidden" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <p class="flex pr-3">Course Menu:</p>
+    <button (click)="mest()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+        </svg>              
+    </button>
+</section>
+<section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <app-vertnav></app-vertnav>
+    <div *ngIf="!ismenuo" class="pl-3 py-3 w-full border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">HTML Comments</h1>
+        <p class="px-3 2xl:text-lg">
+            Comments in HTML are like little notes you leave in your code for yourself or other people. 
+            These notes help make the code easier to understand but don't show up on the actual website. The web browser just skips over them!
+        </p>
+        <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">Key Points About Comments</h2>
+        <ul class="list-disc px-8 2xl:text-lg">
+            <li>Comments are ignored by web browsers.</li>
+            <li>They aid in code readability and documentation.</li>
+            <li>HTML comments are denoted by < !-- content -->.</li>
+            <li>The shortcut key for commenting out code is Ctrl + /.</li>
+            <li>HTML supports both single-line and multi-line comments.</li>
+        </ul>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Single-line Comments:</h1>
+        <p class="px-3 2xl:text-lg">
+            Single-line comments are contained within one line. They are useful for short annotations.<br>
+            Example:
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 relative">
+            <pre class="p-5">{{ code1 }}</pre>
+            <button [cdkCopyToClipboard]="code1" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <p class="px-3 2xl:text-lg">
+            As you can see in the video below, the text inside the comment is not rendered
+        </p>
+        <div class="lg:flex px-3 lg:gap-5">
+            <img src="images/HTML/commentcode.png">
+            <span class="lg:hidden">output:</span>
+            <img src="images/HTML/commentoutput.png">
+        </div>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Multi-line Comments:</h1>
+        <p class="px-3 2xl:text-lg">
+            Multi-line comments span across multiple lines, making them ideal for detailed explanations or temporarily disabling blocks of code.<br>
+            Example:
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 relative">
+            <pre class="p-5">{{ code1 }}</pre>
+            <button [cdkCopyToClipboard]="code1" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <div class="flex justify-between mx-5 my-10">
+            <a [routerLink]="['/courses/html/htmlattributes']">
+                <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                    Previous
+                </button>
+            </a>
+            <a [routerLink]="['/courses/html/htmlidandclass']">
+                <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    Next
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>                  
+                </button>
+            </a>
+        </div>
+    </div>
+</section>.

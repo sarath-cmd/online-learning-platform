@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
 import { DarkthemeService } from '../../../darktheme.service';
 import { MobilemenuService } from '../../mobilemenu.service';
-import { RouterOutlet, RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { VertnavComponent } from '../vertnav/vertnav.component';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 
+
 @Component({
-  selector: 'app-htmlexecution',
+  selector: 'app-paragraphtag',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink, VertnavComponent, ClipboardModule],
-  templateUrl: './htmlexecution.component.html',
+  imports: [CommonModule, RouterLink, VertnavComponent, ClipboardModule],
+  templateUrl: './paragraphtag.component.html',
 })
-export class HtmlexecutionComponent {
+export class ParagraphtagComponent {
   isDark: boolean = false;
   ismenuo = false
   constructor(private themeService: DarkthemeService, private menuService: MobilemenuService) {}
@@ -27,14 +28,4 @@ export class HtmlexecutionComponent {
   mest() {
     this.menuService.cms();
   }
-  codes = `<!DOCTYPE html>
-<html>
-  <head>
-    <title>Page Title</title>
-  </head>
-  <body>
-    <h1>My First Heading</h1>
-    <p>My first paragraph.</p>
-  </body>
-</html>`
 }

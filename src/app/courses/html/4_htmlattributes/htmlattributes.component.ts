@@ -11,7 +11,6 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
   standalone: true,
   imports: [CommonModule, RouterLink, VertnavComponent, ClipboardModule],
   templateUrl: './htmlattributes.component.html',
-  styleUrl: './htmlattributes.component.css'
 })
 export class HtmlattributesComponent {
   isDark: boolean = false;
@@ -30,5 +29,7 @@ export class HtmlattributesComponent {
   }
   code1 = `<a href="https://www.google.co.in/">Visit Google</a>`
   code2 = `<img src="img_1.jpg">`
-  code3 = `<img src="img_1.jpg" width="500" height="600">` 
+  code3 = `<img src="img_1.jpg" width="500" height="600">`
+  code4 = `<img src="img_typo.jpg" alt="Girl with a jacket">`
+  code5 = `<p title="I'm a tooltip">This is a paragraph.</p>`
 }

@@ -60,8 +60,39 @@
         <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">The alt Attribute</h1>
         <p class="px-5 2xl:text-lg">
             The required alt attribute for the < img > tag specifies an alternate text for an image, if the image for some reason cannot be displayed.
-            This can be due to a slow connection, or an error in the src attribute, or if the user uses a screen reader.
+            This can be due to a slow connection, or an error in the src attribute, or if the user uses a screen reader.<br>
+            consider that we have an typo in the code then the image will not be loaded instead the text from the alt attribute will be displayed.
         </p>
-
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 relative">
+            <pre class="p-5">{{ code4 }}</pre>
+            <button [cdkCopyToClipboard]="code4" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">The title Attribute</h1>
+        <p class="px-5 2xl:text-lg">
+            The title attribute defines some extra information about an element. The value of the title attribute will be displayed as a tooltip when you mouse
+            is hovered over the element
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 relative">
+            <pre class="p-5">{{ code5 }}</pre>
+            <button [cdkCopyToClipboard]="code5" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <div class="flex justify-between mx-5 my-10">
+            <a [routerLink]="['/courses/html/htmlelement']">
+                <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                    Previous
+                </button>
+            </a>
+            <a [routerLink]="['/courses/html/htmlcomments']">
+                <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    Next
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>                  
+                </button>
+            </a>
+        </div>
     </div>
 </section>

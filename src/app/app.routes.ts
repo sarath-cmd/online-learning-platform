@@ -16,6 +16,10 @@ import { BrtagComponent } from './courses/html/10_brtag/brtag.component';
 import { AnchortagComponent } from './courses/html/11_anchortag/anchortag.component';
 import { ImgtagComponent } from './courses/html/12_imgtag/imgtag.component';
 import { FormattingComponent } from './courses/html/13_formatting/formatting.component';
+import { ListComponent } from './courses/html/14_list/list.component';
+import { UnorderedlistComponent } from './courses/html/15_unorderedlist/unorderedlist.component';
+import { OrderedlistComponent } from './courses/html/16_orderedlist/orderedlist.component';
+import { DetailedlistComponent } from './courses/html/17_detailedlist/detailedlist.component';
 
 export const routes: Routes = [
     {path:'', component:HomeComponent},
@@ -34,5 +38,9 @@ export const routes: Routes = [
     {path:'courses/html/anchortag', component:AnchortagComponent},
     {path:'courses/html/imagetag', component:ImgtagComponent},
     {path:'courses/html/htmlformatting', component:FormattingComponent},
+    {path:'courses/html/list', component:ListComponent},
+    {path:'courses/html/unorderedlist', component:UnorderedlistComponent},
+    {path:'courses/html/orderedlist', component:OrderedlistComponent},
+    {path:'courses/html/detailedlist', component:DetailedlistComponent},
     { path: '**', component:PnfComponent  }
 ];

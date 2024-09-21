@@ -1,0 +1,62 @@
+<section class="flex md:hidden" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <p class="flex pr-3">Course Menu:</p>
+    <button (click)="mest()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+        </svg>              
+    </button>
+</section>
+<section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <app-vertnav></app-vertnav>
+    <div *ngIf="!ismenuo" class="pl-3 py-3 w-full md:border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">HTML Lists</h1>
+        <p class="px-3 2xl:text-lg">
+            Our day-to-day lives often involve the use of lists. For example, when we go shopping, 
+            the bill we receive includes a list of all the items we've purchased. In a similar manner, web developers use lists to neatly display data on websites.
+        </p>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Types of HTML Lists</h1>
+        <p class="px-3 2xl:text-lg">
+            HTML provides different types of lists to display data in various forms. Each list contains one or more list items.
+        </p>
+        <ul class="list-disc px-8 2xl:text-lg">
+            <li><b>Unordered List: </b>Displays items using bullets.</li>
+            <li><b>Ordered List: </b>Displays items in a numerical sequence, and supports various numbering styles like Arabic numerals, Roman numerals, and so on.</li>
+            <li><b>Definition List: </b>Organizes items in a format similar to a dictionary, with terms and their corresponding definitions.</li>
+        </ul>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">An Unordered List</h1>
+        <p class="px-3 2xl:text-lg">
+            An unordered list uses bullets to display items. It is suitable for listing items where the order doesn't matter. 
+            We will explore unordered lists in great detail in the upcoming chapters
+        </p>
+        <img src="images/HTML/ul.png" class="mt-4 h-[30vh] sm:ml-5">
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">An Ordered List</h1>
+        <p class="px-3 2xl:text-lg">
+            An ordered list uses numbers or other types of markers to indicate the sequence of items. 
+            It's ideal for listing steps in a process or ranking items in order of importance. We will soon explore ordered lists in great detail
+        </p>
+        <img src="images/HTML/ol.png" class="mt-4 h-[30vh] sm:ml-5">
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">A Definition List</h1>
+        <p class="px-3 2xl:text-lg">
+            A definition list arranges items in a way similar to a dictionary, with a term followed by its definition. 
+            This is useful for glossaries or to display metadata.
+        <img src="images/HTML/dl.png" class="mt-4 h-[30vh] sm:ml-5">
+        <div class="flex justify-between mx-5 my-10">
+            <a [routerLink]="['/courses/html/htmlformatting']">
+                <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                    Previous
+                </button>
+            </a>
+            <a [routerLink]="['/courses/html/unorderedlist']">
+                <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    Next
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>                  
+                </button>
+            </a>
+        </div>
+    </div>
+</section>

@@ -9,47 +9,49 @@
 <section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
     <app-vertnav></app-vertnav>
     <div *ngIf="!ismenuo" class="pl-3 py-3 w-full md:border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
-        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">HTML Comments</h1>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">HTML Unordered List</h1>
         <p class="px-3 2xl:text-lg">
-            Comments in HTML are like little notes you leave in your code for yourself or other people. 
-            These notes help make the code easier to understand but don't show up on the actual website. The web browser just skips over them!
+            An unordered list is a list of items that are not arranged in any specific, sequential order. Unlike ordered lists, the items in an unordered 
+            list are typically marked with bullet points, dashes, or other symbols to indicate list membership, but these markers do not imply any particular order.
         </p>
-        <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">Key Points About Comments</h2>
+        <img src="images/HTML/ul.png" class="mt-4 h-[30vh] sm:ml-5">
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Key Characteristics of Unordered Lists</h1>
         <ul class="list-disc px-8 2xl:text-lg">
-            <li>Comments are ignored by web browsers.</li>
-            <li>They aid in code readability and documentation.</li>
-            <li>HTML comments are denoted by &lt;!-- content --&gt;.</li>
-            <li>The shortcut key for commenting out code is Ctrl + /.</li>
-            <li>HTML supports both single-line and multi-line comments.</li>
+            <li>No specific sequence is required.</li>
+            <li>Typically displayed as bullet points.</li>
+            <li>Defined using the &lt;ul&gt; tag.</li>
+            <li>Individual items use the &lt;li&gt; tag.</li>
         </ul>
-        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Single-line Comments:</h1>
-        <p class="px-3 2xl:text-lg">
-            Single-line comments are contained within one line. They are useful for short annotations.<br>
-            <b>Example:</b>
-        </p>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Basic Example</h1>
         <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
             <pre class="p-5 pl-0 sm:pl-5">{{ code1 }}</pre>
             <button [cdkCopyToClipboard]="code1" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
         </div>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5">Output:</h1>
+        <ul class="list-disc px-8 2xl:text-lg">
+            <li>Pen</li>
+            <li>Pencil</li>
+            <li>Eraser</li>
+        </ul>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Customizing Bullet Points with 'type' Attribute</h1>
         <p class="px-3 2xl:text-lg">
-            As you can see in the images below, the text inside the comment is not rendered
+            You can specify the style of bullet points using the type attribute. It supports three values:
         </p>
-        <div class="lg:flex px-3 lg:gap-5">
-            <img src="images/HTML/commentcode.png">
-            <span class="lg:hidden">output:</span>
-            <img src="images/HTML/commentoutput.png">
-        </div>
-        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Multi-line Comments:</h1>
-        <p class="px-3 2xl:text-lg">
-            Multi-line comments span across multiple lines, making them ideal for detailed explanations or temporarily disabling blocks of code.<br>
-            <b>Example:</b>
-        </p>
-        <div class="2xl:text-lg " [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+        <ul class="list-disc px-8 2xl:text-lg">
+            <li>disc - default bullet style</li>
+            <li>square</li>
+            <li>circle</li>
+        </ul>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5">Example Using Square Bullets:</h1>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
             <pre class="p-5 pl-0 sm:pl-5">{{ code2 }}</pre>
             <button [cdkCopyToClipboard]="code2" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
         </div>
-        <div class="flex justify-between mx-5 py-10">
-            <a [routerLink]="['/courses/html/htmlattributes']">
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5">Output:</h1>
+        <img src="images/HTML/ulsquare.png" class="mt-4 h-[30vh] sm:ml-5">
+        
+        <div class="flex justify-between mx-5 my-10">
+            <a [routerLink]="['/courses/html/list']">
                 <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
@@ -57,7 +59,7 @@
                     Previous
                 </button>
             </a>
-            <a [routerLink]="['/courses/html/htmlidandclass']">
+            <a [routerLink]="['/courses/html/orderedlist']">
                 <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
                     Next
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -67,4 +69,4 @@
             </a>
         </div>
     </div>
-</section>.
+</section>

@@ -11,9 +11,9 @@
     <div *ngIf="!ismenuo" class="pl-3 py-3 w-full md:border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
         <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Anchor Tag</h1>
         <p class="px-3 2xl:text-lg">
-            Links are fundamental to navigating the web. In HTML, links are created using the 'a' tag, also known as the Anchor tag.
+            Links are fundamental to navigating the web. In HTML, links are created using the &lt;a&gt; tag, also known as the Anchor tag.
         </p>
-        <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">Syntax of a tag</h2>
+        <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">Syntax of anchor tag</h2>
         <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
             <pre class="p-5 pl-0 sm:pl-5">{{ code1 }}</pre>
             <button [cdkCopyToClipboard]="code1" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
@@ -51,7 +51,7 @@
             <button [cdkCopyToClipboard]="code2" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
         </div>
         <p class="px-3 2xl:text-lg">
-            Inside that p tag add a large amount of content so that you need to scroll down to see the second section. 
+            Inside that &lt;p&gt; tag add a large amount of content so that you need to scroll down to see the second section. 
             After that come to the top of the page and click on the link now you could see that it automaticaly scrolls down to the second section. 
             This is how we will navigate through a single page.
         </p>

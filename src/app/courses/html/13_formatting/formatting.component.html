@@ -1,1 +1,184 @@
-<p>formatting works!</p>
+<section class="flex md:hidden" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <p class="flex pr-3">Course Menu:</p>
+    <button (click)="mest()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+        </svg>              
+    </button>
+</section>
+<section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <app-vertnav></app-vertnav>
+    <div *ngIf="!ismenuo" class="pl-3 py-3 w-full md:border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">HTML Text Formatting</h1>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">HTML Formatting Elements</h1>
+        <p class="px-3 2xl:text-lg">
+            Formatting elements were designed to display special types of text
+        </p>
+        <ul class="list-disc px-8 2xl:text-lg">
+            <li>&lt;b&gt; - Bold text</li>
+            <li>&lt;strong&gt; - Important text</li>
+            <li>&lt;i&gt; - Italic text</li>
+            <li>&lt;em&gt; - Emphasized text</li>
+            <li>&lt;mark&gt; - Marked text</li>
+            <li>&lt;small&gt; - Smaller text</li>
+            <li>&lt;del&gt; - Deleted text</li>
+            <li>&lt;ins&gt; - Inserted text</li>
+            <li>&lt;sub&gt; - Subscript text</li>
+            <li>&lt;sup&gt; - Superscript text</li>
+        </ul>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">&lt;b&gt; and &lt;strong&gt; Elements</h1>
+        <p class="px-3 2xl:text-lg">
+            The HTML &lt;b&gt; element defines bold text, without any extra importance.<br>
+            <b>Example:</b>
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code1 }}</pre>
+            <button [cdkCopyToClipboard]="code1" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <p class="px-3 2xl:text-lg">
+            The HTML &lt;strong&gt; element defines text with strong importance. The content inside is typically displayed in bold.<br>
+            <b>Example:</b>
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code2 }}</pre>
+            <button [cdkCopyToClipboard]="code2" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <div class="lg:flex px-3 lg:gap-5 mt-4">
+            <img src="images/HTML/btagcode.png">
+            <span class="lg:hidden">output:</span>
+            <img src="images/HTML/btagoutput.png" class="w-auto h-40">
+        </div>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">&lt;i&gt; and &lt;em&gt; Elements</h1>
+        <p class="px-3 2xl:text-lg">
+            The HTML &lt;i&gt; element defines a part of text in an alternate voice or mood. The content inside is typically displayed in italic.
+        </p>
+        <p class="px-5 2xl:text-lg">
+            <b class="text-purple-500">TIPS:</b>The &lt;i&gt; tag is often used to indicate a technical term, a phrase from another language, a thought, a name, etc.<br>
+            <b>Example:</b>
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code3 }}</pre>
+            <button [cdkCopyToClipboard]="code3" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <p class="px-3 2xl:text-lg">
+            The HTML &lt;em&gt; element defines emphasized text. The content inside is typically displayed in italic
+        </p>
+        <p class="px-5 2xl:text-lg">
+            <b class="text-purple-500">TIPS:</b>A screen reader will pronounce the words in &lt;em&gt; with an emphasis, using verbal stress.<br>
+            <b>Example:</b>
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code4 }}</pre>
+            <button [cdkCopyToClipboard]="code4" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <div class="lg:flex px-3 lg:gap-5 mt-4">
+            <img src="images/HTML/itagcode.png">
+            <span class="lg:hidden">output:</span>
+            <img src="images/HTML/itagoutput.png" class="w-auto h-40 sm:w-[40vw]">
+        </div>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">&lt;small&gt; Element</h1>
+        <p class="px-3 2xl:text-lg">
+            The HTML &lt;small&gt; element defines smaller text.<br>
+            <b>Example:</b>
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code5 }}</pre>
+            <button [cdkCopyToClipboard]="code5" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <div class="lg:flex px-3 lg:gap-5 mt-4">
+            <img src="images/HTML/smalltagcode.png">
+            <span class="lg:hidden">output:</span>
+            <img src="images/HTML/smalltagoutput.png" class="w-auto h-40">
+        </div>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">&lt;mark&gt; Element</h1>
+        <p class="px-3 2xl:text-lg">
+            The HTML &lt;mark&gt; element defines text that should be marked or highlighted<br>
+            <b>Example:</b>
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code6 }}</pre>
+            <button [cdkCopyToClipboard]="code6" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <div class="lg:flex px-3 lg:gap-5 mt-4">
+            <img src="images/HTML/marktagcode.png">
+            <span class="lg:hidden">output:</span>
+            <img src="images/HTML/marktagoutput.png" class="w-auto h-40 sm:w-[40vw]">
+        </div>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">&lt;del&gt; Element</h1>
+        <p class="px-3 2xl:text-lg">
+            The HTML &lt;del&gt; element defines text that has been deleted from a document. Browsers will usually strike a line through deleted text<br>
+            <b>Example:</b>
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code7 }}</pre>
+            <button [cdkCopyToClipboard]="code7" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <div class="lg:flex px-3 lg:gap-5 mt-4">
+            <img src="images/HTML/deltagcode.png">
+            <span class="lg:hidden">output:</span>
+            <img src="images/HTML/deltagoutput.png" class="w-auto h-40 sm:w-[40vw]">
+        </div>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">&lt;ins&gt; Element</h1>
+        <p class="px-3 2xl:text-lg">
+            The HTML &lt;ins&gt; element defines a text that has been inserted into a document. Browsers will usually underline inserted text.<br>
+            <b>Example:</b>
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code8 }}</pre>
+            <button [cdkCopyToClipboard]="code8" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <div class="lg:flex px-3 lg:gap-5 mt-4">
+            <img src="images/HTML/instagcode.png">
+            <span class="lg:hidden">output:</span>
+            <img src="images/HTML/instagoutput.png" class="w-auto h-40 sm:w-[40vw]">
+        </div>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">&lt;sub&gt; Element</h1>
+        <p class="px-3 2xl:text-lg">
+            The HTML &lt;sub&gt;  element defines subscript text. Subscript text appears half a character below the normal line, 
+            and is sometimes rendered in a smaller font. Subscript text can be used for chemical formulas, like H2O.<br>
+            <b>Example:</b>
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code9 }}</pre>
+            <button [cdkCopyToClipboard]="code9" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <div class="lg:flex px-3 lg:gap-5 mt-4">
+            <img src="images/HTML/subtagcode.png">
+            <span class="lg:hidden">output:</span>
+            <img src="images/HTML/subtagoutput.png" class="w-auto h-40 sm:w-[40vw]">
+        </div>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">&lt;sup&gt; Element</h1>
+        <p class="px-3 2xl:text-lg">
+            The HTML &lt;sup&gt;  element defines superscript text. Superscript text appears half a character above the normal line, 
+            and is sometimes rendered in a smaller font. Superscript text can be used for footnotes, like WWW[1].<br>
+            <b>Example:</b>
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code10 }}</pre>
+            <button [cdkCopyToClipboard]="code10" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <div class="lg:flex px-3 lg:gap-5 mt-4">
+            <img src="images/HTML/suptagcode.png">
+            <span class="lg:hidden">output:</span>
+            <img src="images/HTML/suptagoutput.png" class="w-auto h-40 sm:w-[40vw]">
+        </div>
+        <div class="flex justify-between mx-5 my-10">
+            <a [routerLink]="['/courses/html/imagetag']">
+                <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                    Previous
+                </button>
+            </a>
+            <a [routerLink]="['/courses/html/list']">
+                <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    Next
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>                  
+                </button>
+            </a>
+        </div>
+    </div>
+</section>

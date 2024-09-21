@@ -6,16 +6,16 @@
         </svg>              
     </button>
 </section>
-<section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+<section class="flex min-h-[92vh]" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
     <app-vertnav></app-vertnav>
     <div *ngIf="!ismenuo" class="pl-3 py-3 w-full md:border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
         <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Horizontal Line Tag</h1>
         <p class="px-3 2xl:text-lg">
-            To add a horizontal line in your HTML document, the hr tag comes in handy.
+            To add a horizontal line in your HTML document, the &lt;hr&gt; tag comes in handy.
         </p>
         <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">How to use the hr tag?</h2>
         <p class="px-3 2xl:text-lg">
-            The syntax of the hr tag looks something like this.
+            The syntax of the &lt;hr&gt; tag looks something like this.
         </p>
         <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
             <pre class="p-5 pl-0 sm:pl-5">{{ code1 }}</pre>
@@ -24,7 +24,7 @@
         <p class="px-3 2xl:text-lg">
             The hr tag is an empty or self-closing tag, meaning it doesn't require a closing tag. 
             It serves as a visual separator, dividing different sections of your document with a horizontal line.<br>
-            Example:
+            <b>Example:</b>
         </p>
         <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
             <pre class="p-5 pl-0 sm:pl-5">{{ code2 }}</pre>

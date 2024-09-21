@@ -4,15 +4,14 @@ import { MobilemenuService } from '../../mobilemenu.service';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { VertnavComponent } from '../vertnav/vertnav.component';
-import { ClipboardModule } from '@angular/cdk/clipboard';
 
 @Component({
-  selector: 'app-htmlcomments',
+  selector: 'app-list',
   standalone: true,
-  imports: [CommonModule, RouterLink, VertnavComponent, ClipboardModule],
-  templateUrl: './htmlcomments.component.html',
+  imports: [CommonModule, RouterLink, VertnavComponent],
+  templateUrl: './list.component.html',
 })
-export class HtmlcommentsComponent {
+export class ListComponent {
   isDark: boolean = false;
   ismenuo = false
   constructor(private themeService: DarkthemeService, private menuService: MobilemenuService) {}
@@ -27,9 +26,4 @@ export class HtmlcommentsComponent {
   mest() {
     this.menuService.cms();
   }
-  code1 = `<!--single-line comment-->`
-  code2 = `<!-- 
-  This is a multi-line comment.
-  It spans multiple lines.
--->`
 }

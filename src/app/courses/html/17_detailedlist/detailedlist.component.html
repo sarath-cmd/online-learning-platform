@@ -9,34 +9,23 @@
 <section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
     <app-vertnav></app-vertnav>
     <div *ngIf="!ismenuo" class="pl-3 py-3 w-full md:border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
-        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">HTML Paragraphs</h1>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">HTML Ordered List</h1>
         <p class="px-3 2xl:text-lg">
-            The HTML &lt;p&gt; element defines a paragraph.
-            A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after a paragraph.
+            An ordered list is a list of items that are arranged in a specific, sequential order. Each item in the list is usually numbered to indicate its position in the sequence. 
+            Ordered lists are commonly used when the sequence of the items is important, such as in step-by-step instructions or rankings.
         </p>
-        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
-            <pre class="p-5">{{ code1 }}</pre>
+        <img src="images/HTML/ol.png" class="mt-4 h-[30vh] sm:ml-5">
+        <!-- <ul class="list-disc px-8 2xl:text-lg">
+            <li>Ordered lists are used for items that follow a sequence.</li>
+            <li>They are created using the &lt;ol&gt; (Ordered List) tag.</li>
+            <li>List items are enclosed within &lt;li&gt; (List Item) tags.</li>
+        </ul> -->
+        <!-- <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code1 }}</pre>
             <button [cdkCopyToClipboard]="code1" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
-        </div>
-        <div class="lg:flex px-3 lg:gap-5 mt-4">
-            <img src="images/HTML/paragraphcode.png">
-            <span class="lg:hidden">output:</span>
-            <img src="images/HTML/paragraphoutput.png">
-        </div>
-        <p class="px-3 2xl:text-lg">
-            The browser will automatically remove any extra spaces and lines that are present in the p tag when the page is displayed.
-        </p>
-        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
-            <pre class="p-5">{{ code2 }}</pre>
-            <button [cdkCopyToClipboard]="code2" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
-        </div>
-        <div class="lg:flex px-3 lg:gap-5 mt-4">
-            <img src="images/HTML/paragraphcode1.png">
-            <span class="lg:hidden">output:</span>
-            <img src="images/HTML/paragraphoutput1.png" class="sm:w-[80vw] lg:w-[35vw] sm:h-[15vh]">
-        </div>
-        <div class="flex justify-between mx-5 my-10">
-            <a [routerLink]="['/courses/html/htmlheadingtag']">
+        </div> -->
+        <!-- <div class="flex justify-between mx-5 my-10">
+            <a [routerLink]="['/courses/html/unorderedlist']">
                 <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
@@ -44,7 +33,7 @@
                     Previous
                 </button>
             </a>
-            <a [routerLink]="['/courses/html/hrtag']">
+            <a [routerLink]="['/courses/html/detailedlist']">
                 <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
                     Next
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -52,6 +41,7 @@
                     </svg>                  
                 </button>
             </a>
-        </div>
+        </div> -->
     </div>
-</section>  
+</section>
+        

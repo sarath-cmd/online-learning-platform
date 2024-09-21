@@ -11,7 +11,7 @@
     <div *ngIf="!ismenuo" class="pl-3 py-3 w-full md:border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
         <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Line Break Tag</h1>
         <p class="px-3 2xl:text-lg">
-            To insert a line break in your HTML document, you can utilize the br tag.
+            To insert a line break in your HTML document, you can utilize the &lt;br&gt; tag.
             br tag is used to insert line breaks in text or paragraphs i.e Use br if you want a line break (a new line) without starting a new paragraph.
             The syntax for the br tag looks like this
         </p>
@@ -23,7 +23,7 @@
             The br tag is commonly referred to as an empty or self-closing tag, meaning it doesn't require a closing tag. 
             This tag is responsible for breaking text lines or separating paragraphs. When implemented, it automatically moves the text following the tag to the next line.
             <br>
-            Example:
+            <b>Example:</b>
         </p>
         <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
             <pre class="p-5 pl-0 sm:pl-5">{{ code2 }}</pre>
@@ -34,12 +34,12 @@
             <span class="lg:hidden">output:</span>
             <img src="images/HTML/broutput.png" class="w-auto h-20">
         </div>
-        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">HTML pre Element</h1>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">HTML &lt;pre&gt; Element</h1>
         <p class="px-3 2xl:text-lg">
             The text inside a pre element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks.
             This means that if your using this pre tag then we do not need to use the br tag because if we press enter and type the content it will work as a line break
             and the content will be displayed in the newline. This pre tag is very useful for displaying songs and poems etc.<br>
-            Example:
+            <b>Example:</b>
         </p>
         <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
             <pre class="p-5 pl-0 sm:pl-5">{{ code3 }}</pre>

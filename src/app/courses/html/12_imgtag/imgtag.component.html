@@ -1,0 +1,86 @@
+<section class="flex md:hidden" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <p class="flex pr-3">Course Menu:</p>
+    <button (click)="mest()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+        </svg>              
+    </button>
+</section>
+<section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <app-vertnav></app-vertnav>
+    <div *ngIf="!ismenuo" class="pl-3 py-3 w-full md:border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Image Tag</h1>
+        <p class="px-3 2xl:text-lg">
+            Images play a crucial role in enhancing web pages by providing a visual context that complements textual content. 
+            In HTML, the img tag is used to embed images into web pages.
+        </p>
+        <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">Basic Syntax for Embedding Images</h2>
+        <p class="px-3 2xl:text-lg">
+            This is how the syntax to embed an image in html looks like
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code1 }}</pre>
+            <button [cdkCopyToClipboard]="code1" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <div class="px-3 mt-4">
+            <img src="images/HTML/imgtagcode.png">
+            <span>output:</span>
+            <img src="images/HTML/imgtagoutput.png" class="w-auto h-40">
+        </div>
+        <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">Key Features of the img Tag</h2>
+        <ul class="list-disc px-8 2xl:text-lg">
+            <li>It's a self-closing tag, meaning it doesn't require a corresponding closing tag.</li>
+            <li>Commonly used attributes include the "alt" attribute for image descriptions and the "src" attribute for specifying the image location.</li>
+            <li>Supports various image formats including PNG, JPEG, JPG, and GIF.</li>
+        </ul>
+        <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">Setting Mandatory Attributes</h2>
+        <p class="px-3 2xl:text-lg">
+            The "src" and "alt" attributes are essential for the proper functioning of the img tag.
+        </p>
+        <ul class="list-disc px-8 2xl:text-lg">
+            <li><b>src attribute: </b>Specifies the path to the image file.</li>
+            <li><b>alt attribute: </b>Provides a text description for the image.</li>
+        </ul>
+        <p class="px-3 2xl:text-lg">
+            Example:
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code2m }}</pre>
+            <button [cdkCopyToClipboard]="code2m" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <p class="px-3 2xl:text-lg">
+            <span class="font-bold text-purple-600">Note: </span>To find the image's location, right-click on the image, go to properties, and check the location field.
+        </p>
+        <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">Setting Image Dimensions</h2>
+        <p class="px-3 2xl:text-lg">
+            Although dimensions can be set using the "width" and "height" attributes in the img tag, modern best practices recommend using CSS for this purpose.
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code3m }}</pre>
+            <button [cdkCopyToClipboard]="code3m" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <div class="px-3 mt-4">
+            <img src="images/HTML/imgtag1code.png">
+            <span>output:</span>
+            <img src="images/HTML/imgtag1output.png" class="w-auto h-40">
+        </div>
+        <div class="flex justify-between mx-5 my-10">
+            <a [routerLink]="['/courses/html/anchortag']">
+                <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                    Previous
+                </button>
+            </a>
+            <a [routerLink]="['/courses/html/htmlformatting']">
+                <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    Next
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>                  
+                </button>
+            </a>
+        </div>
+    </div>
+</section>

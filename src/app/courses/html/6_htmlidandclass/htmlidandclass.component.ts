@@ -27,9 +27,16 @@ export class HtmlidandclassComponent {
   mest() {
     this.menuService.cms();
   }
-  code1 = `< div id="myUniqueID">This is a div with an ID.< /div>`
-  code2 = `< div class="myClass">This is a div with a class.< /div>
-< p class="myClass">This is a paragraph with the same class.< /p>`
+  code1 = `<div id="myUniqueID">
+  This is a div with an ID.
+</div>`
+  code2 = `<div class="myClass">
+  This is a div with a class.
+</div>
+<p class="myClass">
+ This is a paragraph with
+ the same class.
+</p>`
  code3 = `/* CSS for ID */
 #myUniqueID {
   background-color: yellow;

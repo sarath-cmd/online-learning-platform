@@ -8,7 +8,7 @@
 </section>
 <section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
     <app-vertnav></app-vertnav>
-    <div *ngIf="!ismenuo" class="pl-3 py-3 w-full border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
+    <div *ngIf="!ismenuo" class="pl-3 py-3 w-full md:border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
         <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl py-3 text-purple-500">HTML Execution</h1>
         <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">Let's Get Started: Setting Up Your VS Code</h2>
         <p class="px-3 py-3 2xl:text-lg">
@@ -25,8 +25,8 @@
         <img src="images/HTML/createfile.png" class="px-5">
         <h3 class="font-medium xl:text-lg 2xl:text-xl pt-3">Pasting the Code</h3>
         <p class="px-3 py-3 2xl:text-lg">Now that your file is ready, copy the following code and paste it into your "index.html" file.</p>
-        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 relative">
-            <pre class="p-5">{{ codes }}</pre>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-2 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ codes }}</pre>
             <button [cdkCopyToClipboard]="codes" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
         </div>
         <h3 class="font-medium xl:text-lg 2xl:text-xl pt-3">Output</h3>

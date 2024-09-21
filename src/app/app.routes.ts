@@ -10,6 +10,12 @@ import { HtmlcommentsComponent } from './courses/html/5_htmlcomments/htmlcomment
 import { HtmlidandclassComponent } from './courses/html/6_htmlidandclass/htmlidandclass.component';
 import { HtmlheadingtagComponent } from './courses/html/7_htmlheadingtag/htmlheadingtag.component';
 import { ParagraphtagComponent } from './courses/html/8_paragraphtag/paragraphtag.component';
+import { HrtagComponent } from './courses/html/9_hrtag/hrtag.component';
+import { PnfComponent } from './pnf/pnf.component';
+import { BrtagComponent } from './courses/html/10_brtag/brtag.component';
+import { AnchortagComponent } from './courses/html/11_anchortag/anchortag.component';
+import { ImgtagComponent } from './courses/html/12_imgtag/imgtag.component';
+import { FormattingComponent } from './courses/html/13_formatting/formatting.component';
 
 export const routes: Routes = [
     {path:'', component:HomeComponent},
@@ -23,4 +29,10 @@ export const routes: Routes = [
     {path:'courses/html/htmlidandclass', component:HtmlidandclassComponent},
     {path:'courses/html/htmlheadingtag', component:HtmlheadingtagComponent},
     {path:'courses/html/htmlparagraphtag', component:ParagraphtagComponent},
+    {path:'courses/html/hrtag', component:HrtagComponent},
+    {path:'courses/html/brtag', component:BrtagComponent},
+    {path:'courses/html/anchortag', component:AnchortagComponent},
+    {path:'courses/html/imagetag', component:ImgtagComponent},
+    {path:'courses/html/htmlformatting', component:FormattingComponent},
+    { path: '**', component:PnfComponent  }
 ];

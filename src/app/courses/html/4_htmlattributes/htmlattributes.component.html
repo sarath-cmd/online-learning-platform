@@ -8,7 +8,7 @@
 </section>
 <section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
     <app-vertnav></app-vertnav>
-    <div *ngIf="!ismenuo" class="pl-3 py-3 w-full border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
+    <div *ngIf="!ismenuo" class="pl-3 py-3 w-full md:border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
         <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">HTML Attributes</h1>
         <p class="px-3 2xl:text-lg">
             HTML attributes provide additional information about HTML elements. 
@@ -23,15 +23,15 @@
             The < a> tag defines a hyperlink. For now Understand that the < a> tag is called the anchor tag and it is used to navigate to other pages. 
             The href attribute specifies the URL of the page the link goes to:
         </p>
-        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 relative">
-            <pre class="p-5">{{ code1 }}</pre>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code1 }}</pre>
             <button [cdkCopyToClipboard]="code1" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
         </div>
         <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">The src Attribute</h1>
         <p class="px-5 2xl:text-lg">
             The < img> tag is used to embed an image in an HTML page. The src attribute specifies the path to the image to be displayed:
         </p>
-        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 relative">
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
             <pre class="p-5">{{ code2 }}</pre>
             <button [cdkCopyToClipboard]="code2" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
         </div>
@@ -48,7 +48,7 @@
         <p class="px-5 2xl:text-lg">
             The < img> tag should also contain the width and height attributes, which specify the width and height of the image (in pixels):
         </p>
-        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 relative">
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
             <pre class="p-5">{{ code3 }}</pre>
             <button [cdkCopyToClipboard]="code3" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
         </div>
@@ -63,7 +63,7 @@
             This can be due to a slow connection, or an error in the src attribute, or if the user uses a screen reader.<br>
             consider that we have an typo in the code then the image will not be loaded instead the text from the alt attribute will be displayed.
         </p>
-        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 relative">
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
             <pre class="p-5">{{ code4 }}</pre>
             <button [cdkCopyToClipboard]="code4" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
         </div>
@@ -72,7 +72,7 @@
             The title attribute defines some extra information about an element. The value of the title attribute will be displayed as a tooltip when you mouse
             is hovered over the element
         </p>
-        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 relative">
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
             <pre class="p-5">{{ code5 }}</pre>
             <button [cdkCopyToClipboard]="code5" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
         </div>

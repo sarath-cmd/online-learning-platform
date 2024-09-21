@@ -8,7 +8,7 @@
 </section>
 <section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
     <app-vertnav></app-vertnav>
-    <div *ngIf="!ismenuo" class="pl-3 py-3 w-full border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
+    <div *ngIf="!ismenuo" class="pl-3 py-3 w-full md:border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
         <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Heading Tags</h1>
         <p class="px-3 2xl:text-lg">
             In HTML, heading tags ranging from h1 to h6 are used to define the structure and layout of text on a web page. 
@@ -24,24 +24,24 @@
             The h1 tag defines the first-level heading and is typically the largest and boldest among all the heading tags. 
             It is often used for the main title of the page.
         </p>
-        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 relative">
-            <pre class="p-5">{{ code1 }}</pre>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code1 }}</pre>
             <button [cdkCopyToClipboard]="code1" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
         </div>
         <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">< h2> Tag: Second-Level Heading</h2>
         <p class="px-3 2xl:text-lg">
             The h2 tag is used for second-level headings and is slightly smaller than the h1 tag. This is commonly used for section titles.
         </p>
-        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 relative">
-            <pre class="p-5">{{ code2 }}</pre>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code2 }}</pre>
             <button [cdkCopyToClipboard]="code2" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
         </div>
         <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">< h3> Tag: Third-Level Heading</h2>
         <p class="px-3 2xl:text-lg">
             The h3 tag is used for third-level headings. These are smaller than h2 tags and are often used for sub-sections within an h2 section.
         </p>
-        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 relative">
-            <pre class="p-5">{{ code3 }}</pre>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code3 }}</pre>
             <button [cdkCopyToClipboard]="code3" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
         </div>
         <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">< h4>,< h5>,< h6></h2>

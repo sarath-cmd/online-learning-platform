@@ -27,5 +27,9 @@ export class HtmlelementComponent {
   mest() {
     this.menuService.cms();
   }
-  codes = `<h1><b>This is our first heading</b></h1>`
+  codes = `<h1>
+  <b>
+    This is our first heading
+  </b>
+</h1>`
 }

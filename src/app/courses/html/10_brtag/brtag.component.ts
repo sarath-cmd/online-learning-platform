@@ -6,14 +6,13 @@ import { CommonModule } from '@angular/common';
 import { VertnavComponent } from '../vertnav/vertnav.component';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 
-
 @Component({
-  selector: 'app-paragraphtag',
+  selector: 'app-brtag',
   standalone: true,
   imports: [CommonModule, RouterLink, VertnavComponent, ClipboardModule],
-  templateUrl: './paragraphtag.component.html',
+  templateUrl: './brtag.component.html',
 })
-export class ParagraphtagComponent {
+export class BrtagComponent {
   isDark: boolean = false;
   ismenuo = false
   constructor(private themeService: DarkthemeService, private menuService: MobilemenuService) {}
@@ -28,25 +27,18 @@ export class ParagraphtagComponent {
   mest() {
     this.menuService.cms();
   }
-  code1 = `<p>
-  This is a paragraph.
-</p>
-<p>
-This is another paragraph.
-</p>`
+  code1 = `<br>`
   code2 = `<p>
-This paragraph
-contains a lot of lines
-in the source code,
-but the browser
-ignores it.
-</p>
-
-<p>
-This paragraph
-contains   a lot of spaces
-in the source         code,
-but the        browser
-ignores it.
+  This is 
+  <br>
+  a paragraph
+  <br>
+  with line breaks.
 </p>`
+  code3 = `<pre>
+  Hold fast to dreams
+  For if dreams die
+  Life is a broken-winged bird
+  That cannot fly
+</pre>`
 }

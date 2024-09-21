@@ -27,9 +27,9 @@ export class HtmlcommentsComponent {
   mest() {
     this.menuService.cms();
   }
-  code1 = `< !-- This is a single-line comment -->`
-  code2 = ` <!-- 
+  code1 = `< !--single-line comment-->`
+  code2 = `<!-- 
   This is a multi-line comment.
   It spans multiple lines.
-  -->`
+-->`
 }

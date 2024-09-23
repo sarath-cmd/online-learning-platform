@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
 import { DarkthemeService } from '../../../darktheme.service';
 import { MobilemenuService } from '../../mobilemenu.service';
+import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet, RouterLink } from '@angular/router';
+import { VertnavComponent } from '../vertnav/vertnav.component';
+import { ClipboardModule } from '@angular/cdk/clipboard';
 
 @Component({
-  selector: 'app-vertnav',
+  selector: 'app-inputtype',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink],
-  templateUrl: './vertnav.component.html',
+  imports: [CommonModule, RouterLink, VertnavComponent, ClipboardModule],
+  templateUrl: './inputtype.component.html',
 })
-export class VertnavComponent {
+export class InputtypeComponent {
   isDark: boolean = false;
   ismenuo = false
   constructor(private themeService: DarkthemeService, private menuService: MobilemenuService) {}
@@ -21,5 +23,8 @@ export class VertnavComponent {
     this.menuService.ismenuo$.subscribe(ismenuo => {
       this.ismenuo = ismenuo;
     });
+  }
+  mest() {
+    this.menuService.cms();
   }
 }

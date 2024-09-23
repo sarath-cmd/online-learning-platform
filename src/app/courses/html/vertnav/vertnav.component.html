@@ -1,61 +1,81 @@
 @if (ismenuo) {
     <div class="md:hidden w-full" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
-        <h1 class="mt-1 font-medium">Introduction</h1>
+        <h1 class="mt-1 font-bold">INTRODUCTION</h1>
         <ul>
-            <li class="p-2"><a [routerLink]="['/courses/html/htmlintro']">->HTML Introduction</a></li>
-            <li class="p-2"><a [routerLink]="['/courses/html/htmlexecution']">->HTML Execution</a></li>
-            <li class="p-2"><a [routerLink]="['/courses/html/htmlelement']">->HTML Element</a></li>
-            <li class="p-2"><a [routerLink]="['/courses/html/htmlattributes']">->HTML Attributes</a></li>
-            <li class="p-2"><a [routerLink]="['/courses/html/htmlcomments']">->HTML Comments</a></li>
-            <li class="p-2"><a [routerLink]="['/courses/html/htmlidandclass']">->HTML Id and Class</a></li>
+            <li class="p-2 font-semibold"><a [routerLink]="['/courses/html/htmlintro']">->HTML Introduction</a></li>
+            <li class="p-2 font-semibold"><a [routerLink]="['/courses/html/htmlexecution']">->HTML Execution</a></li>
+            <li class="p-2 font-semibold"><a [routerLink]="['/courses/html/htmlelement']">->HTML Element</a></li>
+            <li class="p-2 font-semibold"><a [routerLink]="['/courses/html/htmlattributes']">->HTML Attributes</a></li>
+            <li class="p-2 font-semibold"><a [routerLink]="['/courses/html/htmlcomments']">->HTML Comments</a></li>
+            <li class="p-2 font-semibold"><a [routerLink]="['/courses/html/htmlidandclass']">->HTML Id and Class</a></li>
         </ul>
-        <h1 class="mt-1 font-medium">HTML BASIC TAGS</h1>
+        <h1 class="mt-1 font-bold">HTML BASIC TAGS</h1>
         <ul>
-            <li class="p-2"><a [routerLink]="['/courses/html/htmlheadingtag']">->Heading Tags</a></li>
-            <li class="p-2"><a [routerLink]="['/courses/html/htmlparagraphtag']">->Paragraph Tag</a></li>
-            <li class="p-2"><a [routerLink]="['/courses/html/hrtag']">->Hr Tag</a></li>
-            <li class="p-2"><a [routerLink]="['/courses/html/brtag']">->Br Tag</a></li>
-            <li class="p-2"><a [routerLink]="['/courses/html/anchortag']">->Anchor Tag</a></li>
-            <li class="p-2"><a [routerLink]="['/courses/html/imagetag']">->Image Tag</a></li>
-            <li class="p-2"><a [routerLink]="['/courses/html/htmlformatting']">->HTML Formatting</a></li>
+            <li class="p-2 font-semibold"><a [routerLink]="['/courses/html/htmlheadingtag']">->Heading Tags</a></li>
+            <li class="p-2 font-semibold"><a [routerLink]="['/courses/html/htmlparagraphtag']">->Paragraph Tag</a></li>
+            <li class="p-2 font-semibold"><a [routerLink]="['/courses/html/hrtag']">->Hr Tag</a></li>
+            <li class="p-2 font-semibold"><a [routerLink]="['/courses/html/brtag']">->Br Tag</a></li>
+            <li class="p-2 font-semibold"><a [routerLink]="['/courses/html/anchortag']">->Anchor Tag</a></li>
+            <li class="p-2 font-semibold"><a [routerLink]="['/courses/html/imagetag']">->Image Tag</a></li>
+            <li class="p-2 font-semibold"><a [routerLink]="['/courses/html/htmlformatting']">->HTML Formatting</a></li>
         </ul>
-        <h1 class="mt-1 font-medium">HTML LISTS</h1>
+        <h1 class="mt-1 font-bold">HTML LISTS</h1>
         <ul>
-            <li class="p-2"><a [routerLink]="['/courses/html/list']">->HTML Lists</a></li>
-            <li class="p-2"><a [routerLink]="['/courses/html/unorderedlist']">->HTML Unordered List</a></li>
-            <li class="p-2"><a [routerLink]="['/courses/html/orderedlist']">->HTML Ordered List</a></li>
-            <li class="p-2"><a [routerLink]="['/courses/html/detailedlist']">->HTML Detailed List</a></li>
+            <li class="p-2 font-semibold"><a [routerLink]="['/courses/html/list']">->HTML Lists</a></li>
+            <li class="p-2 font-semibold"><a [routerLink]="['/courses/html/unorderedlist']">->HTML Unordered List</a></li>
+            <li class="p-2 font-semibold"><a [routerLink]="['/courses/html/orderedlist']">->HTML Ordered List</a></li>
+            <li class="p-2 font-semibold"><a [routerLink]="['/courses/html/detailedlist']">->HTML Detailed List</a></li>
+        </ul>
+        <h1 class="mt-1 font-bold">HTML TABLES</h1>
+        <ul>
+            <li class="p-2 font-semibold"><a [routerLink]="['/courses/html/table']">->HTML Tables</a></li>
+            <li class="p-2 font-semibold"><a [routerLink]="['/courses/html/moreontables']">->More on Tables</a></li>
+        </ul>
+        <h1 class="mt-1 font-bold">HTML FORMS</h1>
+        <ul>
+            <li class="p-2 font-semibold"><a [routerLink]="['/courses/html/formsintroduction']">->HTML Forms Introduction</a></li>
+            <li class="p-2 font-semibold"><a [routerLink]="['/courses/html/inputtype']">->HTML Input Types</a></li>
         </ul>
     </div>
 }
 
-<section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+<section class="flex sticky top-0" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
     <div class="hidden md:block w-52 xl:w-60" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
-        <h1 class="pl-3 font-bold">Introduction</h1>
+        <h1 class="pl-3 pt-5 font-bold">INTRODUCTION</h1>
         <ul>
-            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/htmlintro']">->HTML Introduction</a></li>
-            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/htmlexecution']">->HTML Execution</a></li>
-            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/htmlelement']">->HTML Element</a></li>
-            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/htmlattributes']">->HTML Attributes</a></li>
-            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/htmlcomments']">->HTML Comments</a></li>
-            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/htmlidandclass']">->HTML Id and Class</a></li>
+            <li><a class="py-2 pl-5 font-semibold" [routerLink]="['/courses/html/htmlintro']">->HTML Introduction</a></li>
+            <li><a class="py-2 pl-5 font-semibold" [routerLink]="['/courses/html/htmlexecution']">->HTML Execution</a></li>
+            <li><a class="py-2 pl-5 font-semibold" [routerLink]="['/courses/html/htmlelement']">->HTML Element</a></li>
+            <li><a class="py-2 pl-5 font-semibold" [routerLink]="['/courses/html/htmlattributes']">->HTML Attributes</a></li>
+            <li><a class="py-2 pl-5 font-semibold" [routerLink]="['/courses/html/htmlcomments']">->HTML Comments</a></li>
+            <li><a class="py-2 pl-5 font-semibold" [routerLink]="['/courses/html/htmlidandclass']">->HTML Id and Class</a></li>
         </ul>
         <h1 class="pl-3 font-bold pt-5">HTML BASIC TAGS</h1>
         <ul>
-            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/htmlheadingtag']">->Heading Tags</a></li>
-            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/htmlparagraphtag']">->Paragraph Tag</a></li>
-            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/hrtag']">->Hr Tag</a></li>
-            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/brtag']">->Br Tag</a></li>
-            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/anchortag']">->Anchor Tag</a></li>
-            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/imagetag']">->Image Tag</a></li>
-            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/htmlformatting']">->HTML Formatting</a></li>
+            <li><a class="py-2 pl-5 font-semibold" [routerLink]="['/courses/html/htmlheadingtag']">->Heading Tags</a></li>
+            <li><a class="py-2 pl-5 font-semibold" [routerLink]="['/courses/html/htmlparagraphtag']">->Paragraph Tag</a></li>
+            <li><a class="py-2 pl-5 font-semibold" [routerLink]="['/courses/html/hrtag']">->Hr Tag</a></li>
+            <li><a class="py-2 pl-5 font-semibold" [routerLink]="['/courses/html/brtag']">->Br Tag</a></li>
+            <li><a class="py-2 pl-5 font-semibold" [routerLink]="['/courses/html/anchortag']">->Anchor Tag</a></li>
+            <li><a class="py-2 pl-5 font-semibold" [routerLink]="['/courses/html/imagetag']">->Image Tag</a></li>
+            <li><a class="py-2 pl-5 font-semibold" [routerLink]="['/courses/html/htmlformatting']">->HTML Formatting</a></li>
         </ul>
         <h1 class="pl-3 font-bold pt-5">HTML LISTS</h1>
         <ul>
-            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/list']">->HTML Lists</a></li>
-            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/unorderedlist']">->HTML Unordered List</a></li>
-            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/orderedlist']">->HTML Ordered List</a></li>
-            <li><a class="py-2 pl-5" [routerLink]="['/courses/html/detailedlist']">->HTML Detailed List</a></li>
+            <li><a class="py-2 pl-5 font-semibold" [routerLink]="['/courses/html/list']">->HTML Lists</a></li>
+            <li><a class="py-2 pl-5 font-semibold" [routerLink]="['/courses/html/unorderedlist']">->HTML Unordered List</a></li>
+            <li><a class="py-2 pl-5 font-semibold" [routerLink]="['/courses/html/orderedlist']">->HTML Ordered List</a></li>
+            <li><a class="py-2 pl-5 font-semibold" [routerLink]="['/courses/html/detailedlist']">->HTML Detailed List</a></li>
+        </ul>
+        <h1 class="pl-3 font-bold pt-5">HTML TABLES</h1>
+        <ul>
+            <li><a class="py-2 pl-5 font-semibold" [routerLink]="['/courses/html/table']">->HTML Tables</a></li>
+            <li><a class="py-2 pl-5 font-semibold" [routerLink]="['/courses/html/moreontables']">->More on Tables</a></li>
+        </ul>
+        <h1 class="pl-3 font-bold pt-5">HTML FORMS</h1>
+        <ul>
+            <li><a class="py-2 pl-5 font-semibold" [routerLink]="['/courses/html/formsintroduction']">->HTML Forms Introduction</a></li>
+            <li><a class="py-2 pl-5 font-semibold" [routerLink]="['/courses/html/inputtype']">->HTML Input Type</a></li>
         </ul>
     </div>
 </section>

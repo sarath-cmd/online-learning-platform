@@ -20,6 +20,10 @@ import { ListComponent } from './courses/html/14_list/list.component';
 import { UnorderedlistComponent } from './courses/html/15_unorderedlist/unorderedlist.component';
 import { OrderedlistComponent } from './courses/html/16_orderedlist/orderedlist.component';
 import { DetailedlistComponent } from './courses/html/17_detailedlist/detailedlist.component';
+import { TableComponent } from './courses/html/18_table/table.component';
+import { MoreontableComponent } from './courses/html/19_moreontable/moreontable.component';
+import { FormsintroductionComponent } from './courses/html/20_formsintroduction/formsintroduction.component';
+import { InputtypeComponent } from './courses/html/21_inputtype/inputtype.component';
 
 export const routes: Routes = [
     {path:'', component:HomeComponent},
@@ -42,5 +46,9 @@ export const routes: Routes = [
     {path:'courses/html/unorderedlist', component:UnorderedlistComponent},
     {path:'courses/html/orderedlist', component:OrderedlistComponent},
     {path:'courses/html/detailedlist', component:DetailedlistComponent},
+    {path:'courses/html/table', component:TableComponent},
+    {path:'courses/html/moreontables', component:MoreontableComponent},
+    {path:'courses/html/formsintroduction', component:FormsintroductionComponent},
+    {path:'courses/html/inputtype', component:InputtypeComponent},
     { path: '**', component:PnfComponent  }
 ];

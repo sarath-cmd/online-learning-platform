@@ -16,66 +16,44 @@
 <section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
     <app-vertnav></app-vertnav>
     <div *ngIf="!ismenuo" class="pl-3 py-3 w-full md:border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
-        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Heading Tags</h1>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">More on Tables</h1>
         <p class="px-3 2xl:text-lg">
-            In HTML, heading tags ranging from &lt;h1&gt; to &lt;h6&gt; are used to define the structure and layout of text on a web page. 
-            These tags help create a hierarchical organization of content, making it easier for both users and search engines to understand the page's content.
+            Let's take a closer look at HTML tables and delve into some more aspects of using tables in HTML.
         </p>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5">Adding a Caption</h1>
         <p class="px-3 2xl:text-lg">
-            The h1 tag is generally used for the main title and is the largest and most prominent, while h2 to h6 tags are used for subheadings, 
-            further subheadings and so on. Proper use of heading tags not only improves the readability of a web page but also optimizes it for search 
-            engine ranking in Google
-        </p>
-        <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">&lt;h1&gt; Tag: First-Level Heading</h2>
-        <p class="px-3 2xl:text-lg">
-            The h1 tag defines the first-level heading and is typically the largest and boldest among all the heading tags. 
-            It is often used for the main title of the page.
+            To add a title to your table, you can use the &lt;caption&gt; element. This element helps both in terms of SEO and accessibility.
         </p>
         <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
             <pre class="p-5 pl-0 sm:pl-5">{{ code1 }}</pre>
             <button [cdkCopyToClipboard]="code1" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
         </div>
-        <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">&lt;h2&gt; Tag: Second-Level Heading</h2>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5">Column Groups</h1>
         <p class="px-3 2xl:text-lg">
-            The h2 tag is used for second-level headings and is slightly smaller than the h1 tag. This is commonly used for section titles.
+            You can use the &lt;colgroup&gt; and &lt;col&gt; elements to apply styles to an entire column in an HTML table.
         </p>
         <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
             <pre class="p-5 pl-0 sm:pl-5">{{ code2 }}</pre>
             <button [cdkCopyToClipboard]="code2" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
         </div>
-        <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">&lt;h3&gt; Tag: Third-Level Heading</h2>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5">Table Headers and Footers</h1>
         <p class="px-3 2xl:text-lg">
-            The h3 tag is used for third-level headings. These are smaller than h2 tags and are often used for sub-sections within an h2 section.
+            &lt;th&gt; for individual header cells, HTML tables allow you to group header or footer content using &lt;thead&gt; and &lt;tfoot&gt;.
         </p>
         <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
             <pre class="p-5 pl-0 sm:pl-5">{{ code3 }}</pre>
             <button [cdkCopyToClipboard]="code3" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
         </div>
-        <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">< h4>,< h5>,< h6></h2>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5">Sample HTML Table</h1>
         <p class="px-3 2xl:text-lg">
-            &lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt; are all heading tags they are also similar to the the above mentioned h1,h2,h3 tags.
-            These h4,h5,h6 tags are also subheading tags for each other. Explain each of the h4, h5, h6 tags will be a wast of time because they are all similar to the 
-            h1, h2, h3 tags it will look like copying the same pic of code again and again.
+            Here is an example HTML table with all the important elements:
         </p>
-        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Summary</h1>
-        <ul class="list-disc px-8 2xl:text-lg">
-            <li><b>&lt;h1&gt; Tag: </b>Used for the main title of the page; largest and most prominent heading.</li>
-            <li><b>&lt;h2&gt; Tag: </b>Used for major section headings; smaller than h1 but still quite prominent.</li>
-            <li><b>&lt;h3&gt; Tag: </b>Used for sub-sections within an h2 section; smaller than h2 but larger than h4.</li>
-            <li><b>&lt;h4&gt; Tag: </b>Often used for headings within an h3 section; useful for further breaking down content.</li>
-            <li><b>&lt;h5&gt; Tag: </b>Rarely used; suitable for deeply nested sections or less important headings.</li>
-            <li><b>&lt;h6&gt; Tag: </b>The smallest heading tag; used for very specific or minor headings, rarely seen in general usage.</li>
-        </ul>
-        <p class="px-3 2xl:text-lg">
-            Here is how you can create all these headings:
-        </p>
-        <div class="lg:flex px-3 lg:gap-5">
-            <img src="images/HTML/headingcode.png">
-            <span class="lg:hidden">output:</span>
-            <img src="images/HTML/headingoutput.png">
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code4 }}</pre>
+            <button [cdkCopyToClipboard]="code4" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
         </div>
         <div class="flex justify-between mx-5 my-10">
-            <a [routerLink]="['/courses/html/htmlidandclass']">
+            <a [routerLink]="['/courses/html/table']">
                 <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
@@ -83,7 +61,7 @@
                     Previous
                 </button>
             </a>
-            <a [routerLink]="['/courses/html/htmlparagraphtag']">
+            <a [routerLink]="['/courses/html/formsintroduction']">
                 <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
                     Next
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">

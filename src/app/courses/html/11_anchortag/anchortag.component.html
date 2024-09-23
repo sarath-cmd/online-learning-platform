@@ -1,9 +1,16 @@
-<section class="flex md:hidden" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+<section class="flex md:hidden" *ngIf="!ismenuo" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
     <p class="flex pr-3">Course Menu:</p>
     <button (click)="mest()">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
         </svg>              
+    </button>
+</section>
+<section class="flex md:hidden pr-3 justify-end" *ngIf="ismenuo" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <button (click)="mest()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>                        
     </button>
 </section>
 <section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">

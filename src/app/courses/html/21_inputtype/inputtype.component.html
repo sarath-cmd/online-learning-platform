@@ -16,31 +16,22 @@
 <section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
     <app-vertnav></app-vertnav>
     <div *ngIf="!ismenuo" class="pl-3 py-3 w-full md:border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
-        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl py-3 text-purple-500">HTML Execution</h1>
-        <h2 class="font-medium lg:text-lg xl:text-xl 2xl:text-2xl pt-3">Let's Get Started: Setting Up Your VS Code</h2>
-        <p class="px-3 py-3 2xl:text-lg">
-            If you haven't already set up your environment, let's begin by opening <a class="text-blue-500" target="_blank" href="https://code.visualstudio.com/">Visual Studio Code (VS Code).</a>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Introduction to HTML Forms</h1>
+        <p class="px-3 2xl:text-lg">
+            HTML forms are essential for collecting user input on web pages. Whether it's a search bar, a login screen, or a multi-field registration form, HTML forms play a key role in web interactions. They enable users to submit data, which can be processed, stored, or returned by a server.
         </p>
-        <img src="images/HTML/vscode.png" class="px-5 lg:w-[30vw]">
-        <h3 class="font-medium xl:text-lg 2xl:text-xl pt-3">Creating a New File</h3>
-        <p class="px-3 2xl:text-lg">Click on "Open Folder" and open a folder somewhere on your computer. Once VS Code is open, you'll want to create a new file:</p>
-        <ol class="list-decimal px-8 2xl:text-lg">
-            <li>Click on the "New File" icon in VS Code.</li>
-            <li>Type the filename as "index.html" and hit Enter.</li>
-            <li>After creating you should see a screen with the new file opend in the vscode.</li>
-        </ol>
-        <img src="images/HTML/createfile.png" class="px-5">
-        <h3 class="font-medium xl:text-lg 2xl:text-xl pt-3">Pasting the Code</h3>
-        <p class="px-3 py-3 2xl:text-lg">Now that your file is ready, copy the following code and paste it into your "index.html" file.</p>
-        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-2 relative">
-            <pre class="p-5 pl-0 sm:pl-5">{{ codes }}</pre>
-            <button [cdkCopyToClipboard]="codes" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
-        </div>
-        <h3 class="font-medium xl:text-lg 2xl:text-xl pt-3">Output</h3>
-        <p class="px-3 py-3 2xl:text-lg">Congratulations! If you've followed along, you should now see your very first website displaying the classic "Hello, World!" message.</p>
-        <img src="images/HTML/output.png" class="px-5">
-        <div class="flex justify-between mx-5 my-10">
-            <a [routerLink]="['/courses/html/htmlintro']">
+       
+        <!-- <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5 max-h-[60vh] overflow-scroll overflow-x-hidden">{{ code1 }}</pre>
+            <button [cdkCopyToClipboard]="code1" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div> -->
+        <!-- <ul class="list-disc px-8 2xl:text-lg">
+            <li>The <b>"type"</b> attribute specifies the type of input control (e.g., text, password, checkbox).</li>
+            <li>The <b>"name"</b> attribute is used for identifying the control, especially when the data is sent to the server.</li>
+            <li>The <b>"value"</b> attribute sets a default value for the control, which the user can overwrite.</li>
+        </ul> -->
+        <!-- <div class="flex justify-between mx-5 my-10">
+            <a [routerLink]="['/courses/html/moreontables']">
                 <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
@@ -48,7 +39,7 @@
                     Previous
                 </button>
             </a>
-            <a [routerLink]="['/courses/html/htmlelement']">
+            <a [routerLink]="['/courses/html/formsintroduction']">
                 <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
                     Next
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -56,6 +47,6 @@
                     </svg>                  
                 </button>
             </a>
-        </div>
+        </div> -->
     </div>
 </section>

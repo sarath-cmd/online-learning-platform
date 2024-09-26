@@ -13,25 +13,154 @@
         </svg>                        
     </button>
 </section>
-<section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+<section class="flex" [ngClass]="isDark ? 'text-white bg-[rgb(15,15,17)]' : 'bg-white text-black'">
     <app-vertnav></app-vertnav>
     <div *ngIf="!ismenuo" class="pl-3 py-3 w-full md:border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
-        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Introduction to HTML Forms</h1>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">HTML Input Types</h1>
         <p class="px-3 2xl:text-lg">
-            HTML forms are essential for collecting user input on web pages. Whether it's a search bar, a login screen, or a multi-field registration form, HTML forms play a key role in web interactions. They enable users to submit data, which can be processed, stored, or returned by a server.
+            Input types in HTML forms are the backbone of interactive web applications. They allow users to send information to web servers for various purposes like searching, logging in, or providing feedback
         </p>
-       
-        <!-- <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
-            <pre class="p-5 pl-0 sm:pl-5 max-h-[60vh] overflow-scroll overflow-x-hidden">{{ code1 }}</pre>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Text Input</h1>
+        <p class="px-3 2xl:text-lg">
+            The text input type is the most basic form of input and is widely used for collecting simple text data.
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'text-white bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code1 }}</pre>
             <button [cdkCopyToClipboard]="code1" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
-        </div> -->
-        <!-- <ul class="list-disc px-8 2xl:text-lg">
-            <li>The <b>"type"</b> attribute specifies the type of input control (e.g., text, password, checkbox).</li>
-            <li>The <b>"name"</b> attribute is used for identifying the control, especially when the data is sent to the server.</li>
-            <li>The <b>"value"</b> attribute sets a default value for the control, which the user can overwrite.</li>
-        </ul> -->
-        <!-- <div class="flex justify-between mx-5 my-10">
-            <a [routerLink]="['/courses/html/moreontables']">
+        </div>
+        <p class="px-3 2xl:text-lg">
+            In the above example, the placeholder attribute provides a hint to the user about what to enter.
+        </p>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Password Input</h1>
+        <p class="px-3 2xl:text-lg">
+            The password input type is similar to the text type but hides the characters entered by the user for security reasons.
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'text-white bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code2 }}</pre>
+            <button [cdkCopyToClipboard]="code2" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Radio Buttons</h1>
+        <p class="px-3 2xl:text-lg">
+            Radio buttons are used when you want the user to select only one option from a set of choices.
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'text-white bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code3 }}</pre>
+            <button [cdkCopyToClipboard]="code3" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Checkbox</h1>
+        <p class="px-3 2xl:text-lg">
+            Checkboxes allow the user to select multiple options from a set.
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'text-white bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5">{{ code4 }}</pre>
+            <button [cdkCopyToClipboard]="code4" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">More input types</h1>
+        <p class="px-3 2xl:text-lg">
+            Here is a comprehensive list of input types you can use in html
+        </p>
+        <div class="md:ml-2 mt-3">
+            <table class="border-2 border-solid border-black">
+                <tr class="border-2 border-solid border-black">
+                    <th class="border-2 border-solid border-black">Input Type</th>
+                    <th class="border-2 border-solid border-black">Description</th>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">text</td>
+                    <td class="border-2 border-solid border-black">Allows the user to type a single line of text.</td>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">password</td>
+                    <td class="border-2 border-solid border-black">Allows the user to type a password.</td>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">submit</td>
+                    <td class="border-2 border-solid border-black">Represents a button that, when pressed, submits the form.</td>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">reset</td>
+                    <td class="border-2 border-solid border-black">Represents a button that, when pressed, resets all the form controls to their initial values.</td>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">radio</td>
+                    <td class="border-2 border-solid border-black">Represents an option in a set of options that are mutually exclusive with each other.</td>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">checkbox</td>
+                    <td class="border-2 border-solid border-black">Represents an option in a set that may be selected independently of other options.</td>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">button</td>
+                    <td class="border-2 border-solid border-black">Represents a clickable button.</td>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">color</td>
+                    <td class="border-2 border-solid border-black">Allows the user to select a color.</td>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">date</td>
+                    <td class="border-2 border-solid border-black">Allows the user to select a date.</td>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">datetime-local</td>
+                    <td class="border-2 border-solid border-black">Allows the user to select a date and time with no time zone.</td>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">email</td>
+                    <td class="border-2 border-solid border-black">Allows the user to enter an email address.</td>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">file</td>
+                    <td>Allows the user to select one or more files from their device storage.</td>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">hidden</td>
+                    <td class="border-2 border-solid border-black">Represents a value that is not displayed but is submitted to the server.</td>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">image</td>
+                    <td class="border-2 border-solid border-black">Defines an image that acts as a submit button.</td>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">month</td>
+                    <td class="border-2 border-solid border-black">Allows the user to select a month and year.</td>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">number</td>
+                    <td class="border-2 border-solid border-black">Allows the user to enter a number.</td>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">range</td>
+                    <td class="border-2 border-solid border-black">Allows the user to select a number from a range.</td>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">search</td>
+                    <td class="border-2 border-solid border-black">Allows the user to enter a search query string.</td>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">tel</td>
+                    <td class="border-2 border-solid border-black">Allows the user to enter a telephone number.</td>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">time</td>
+                    <td class="border-2 border-solid border-black">Allows the user to select a time.</td>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">url</td>
+                    <td class="border-2 border-solid border-black">Allows the user to enter a URL.</td>
+                </tr>
+                <tr class="border-2 border-solid border-black">
+                    <td class="border-2 border-solid border-black">week</td>
+                    <td class="border-2 border-solid border-black">Allows the user to select a week.</td>
+                </tr>
+            </table>
+            <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Conclusion</h1>
+            <p class="px-3 2xl:text-lg">
+                Understanding the different types of HTML input is crucial for creating interactive and user-friendly forms. Each input type serves a specific purpose, making it easier to collect, validate, and process user data.
+            </p>
+        </div>
+        <div class="flex justify-between mx-5 my-10">
+            <a [routerLink]="['/courses/html/formsintroduction']">
                 <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
@@ -39,7 +168,7 @@
                     Previous
                 </button>
             </a>
-            <a [routerLink]="['/courses/html/formsintroduction']">
+            <a [routerLink]="['/courses/html/textarea_and_select']">
                 <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
                     Next
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -47,6 +176,6 @@
                     </svg>                  
                 </button>
             </a>
-        </div> -->
+        </div>
     </div>
 </section>

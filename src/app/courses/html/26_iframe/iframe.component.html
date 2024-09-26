@@ -1,0 +1,80 @@
+<section class="flex md:hidden" *ngIf="!ismenuo" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <p class="flex pr-3">Course Menu:</p>
+    <button (click)="mest()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+        </svg>              
+    </button>
+</section>
+<section class="flex md:hidden pr-3 justify-end" *ngIf="ismenuo" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <button (click)="mest()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>                        
+    </button>
+</section>
+<section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <app-vertnav></app-vertnav>
+    <div *ngIf="!ismenuo" class="pl-3 py-3 w-full md:border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">iFrames in HTML</h1>
+        <p class="px-3 2xl:text-lg">
+            iFrames, or Inline Frames, are an integral part of modern web development. They allow you to embed another HTML page within your current page. 
+        </p>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">What is an iFrame?</h1>
+        <p class="px-3 2xl:text-lg">
+            An iFrame is an HTML element that enables an inline frame for the embedding of external content. Essentially, you can load another web page within a designated area of your current webpage.
+        </p>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Why Use iFrames?</h1>
+        <p class="px-3 2xl:text-lg">
+            iFrames offer a variety of use-cases:
+        </p>
+        <ul class="list-disc px-8 2xl:text-lg">
+            <li><b>Content Isolation:</b> iFrames allow you to isolate third-party content, which can improve security.</li>
+            <li><b>Modularity:</b> Easily embed external plugins, widgets, or content.</li>
+            <li><b>Resource Separation:</b> Content within an iFrame can load separately from the rest of the page.</li>
+        </ul>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Basic Syntax</h1>
+        <p class="px-3 2xl:text-lg">
+            The basic syntax of an iFrame is quite straightforward
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5 max-h-[60vh] overflow-scroll overflow-x-hidden">{{ code1 }}</pre>
+            <button [cdkCopyToClipboard]="code1" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Attributes of iFrame</h1>
+        <p class="px-3 2xl:text-lg">
+            Several attributes can enhance the functionality of an iFrame
+        </p>
+        <ul class="list-disc px-8 2xl:text-lg">
+            <li><b>src:</b> Specifies the URL of the page to embed.</li>
+            <li><b>height and width:</b> Define the dimensions.</li>
+            <li><b>frameborder:</b> Indicates whether to display a border.</li>
+            <li><b>scrolling:</b> Controls the scrollbars.</li>
+            <li><b>name:</b> For targeting the iFrame in JavaScript.</li>
+        </ul>
+        
+        <!-- <ol class="list-disc px-8 2xl:text-lg">
+            <li>Inline SVG: Directly writing the SVG XML code within HTML.</li>
+            <li>Using an &lt;img&gt; tag: Point the src attribute to an SVG file.</li>
+            <li>Using CSS: Setting SVG as a background image in a CSS file.</li>
+        </ol> -->
+        <!-- <div class="flex justify-between mx-5 my-10">
+            <a [routerLink]="['/courses/html/video_and_audio_tag']">
+                <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                    Previous
+                </button>
+            </a>
+            <a [routerLink]="['/courses/html/iframes']">
+                <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    Next
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>                  
+                </button>
+            </a>
+        </div> -->
+    </div>
+</section>

@@ -1,0 +1,91 @@
+<section class="flex md:hidden" *ngIf="!ismenuo" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <p class="flex pr-3">Course Menu:</p>
+    <button (click)="mest()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+        </svg>              
+    </button>
+</section>
+<section class="flex md:hidden pr-3 justify-end" *ngIf="ismenuo" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <button (click)="mest()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>                        
+    </button>
+</section>
+<section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <app-vertnav></app-vertnav>
+    <div *ngIf="!ismenuo" class="pl-3 py-3 w-full md:border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Video & Audio Tags</h1>
+        <p class="px-3 2xl:text-lg">
+            This tutorial aims to provide a comprehensive guide on using &lt;video&gt; and &lt;audio&gt; tags in HTML to embed media files.
+        </p>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">The &lt;video&gt; Tag</h1>
+        <p class="px-3 2xl:text-lg">
+            The &lt;video&gt; tag is used to embed video files in an HTML document. It supports multiple attributes to control the video playback.<br>Example usage:
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5 max-h-[60vh] overflow-scroll overflow-x-hidden">{{ code1 }}</pre>
+            <button [cdkCopyToClipboard]="code1" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Attributes for &lt;video&gt; Tag</h1>
+        <ul class="list-disc px-8 2xl:text-lg">
+            <li><b>src:</b> Specifies the path to the video file.</li>
+            <li><b>controls:</b> Adds video controls, like play, pause, and volume.</li>
+            <li><b>autoplay:</b> Automatically starts playing the video when the page loads.</li>
+            <li><b>loop:</b> Repeats the video once it ends.</li>
+            <li><b>muted:</b> Mutes the video by default.</li>
+            <li><b>poster:</b> Specifies an image to be displayed before the video starts playing.</li>
+            <li><b>width</b> and height: Specifies the dimensions of the video.</li>
+        </ul>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">The &lt;audio&gt; Tag</h1>
+        <p class="px-3 2xl:text-lg">
+            The &lt;audio&gt; tag is used to embed audio files in an HTML document. It also supports multiple attributes for control.<br>
+            Example usage:
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5 max-h-[60vh] overflow-scroll overflow-x-hidden">{{ code2 }}</pre>
+            <button [cdkCopyToClipboard]="code2" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Attributes for &lt;audio&gt; Tag</h1>
+        <ul class="list-disc px-8 2xl:text-lg">
+            <li><b>src:</b> Specifies the path to the audio file.</li>
+            <li><b>controls:</b> Adds audio controls, like play, pause, and volume.</li>
+            <li><b>autoplay:</b> Automatically starts playing the audio when the page loads.</li>
+            <li><b>loop:</b> Repeats the audio once it ends.</li>
+            <li><b>muted:</b> Mutes the audio by default.</li>
+            <li><b>preload:</b> Specifies if and how the audio should be loaded when the page loads ('auto', 'metadata', 'none').</li>
+        </ul>
+        <p class="px-3 2xl:text-lg">
+            The "preload" attribute can have the following values:
+        </p>
+        <ol class="list-disc px-8 2xl:text-lg">
+            <li><b>none:</b> This is the default value. It indicates that the browser should not preload the audio file at all. The audio file will only start downloading when the user initiates playback.</li>
+            <li><b>metadata:</b>This value tells the browser to preload only the metadata of the audio file, such as its duration and basic information about the audio. This can be useful if you want to display the audio duration to the user without fully loading the audio data.</li>
+            <li><b>auto: </b>This value instructs the browser to preload the entire audio file as much as possible without delaying the loading of other important page content. The browser will try to load the audio file in the background so that it's ready to play when the user decides to start it.</li>
+        </ol>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Conclusion</h1>
+        <p class="px-3 2xl:text-lg">
+            The &lt;video&gt; and &lt;audio&gt; tags are powerful tools for embedding media content in HTML documents. Utilizing their attributes allows you to offer an interactive and dynamic user experience.
+        </p>
+        
+        <div class="flex justify-between mx-5 my-10">
+            <a [routerLink]="['/courses/html/more_on_forms']">
+                <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                    Previous
+                </button>
+            </a>
+            <a [routerLink]="['/courses/html/svg']">
+                <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    Next
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>                  
+                </button>
+            </a>
+        </div>
+    </div>
+</section>

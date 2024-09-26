@@ -7,12 +7,12 @@ import { VertnavComponent } from '../vertnav/vertnav.component';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 
 @Component({
-  selector: 'app-inputtype',
+  selector: 'app-svginhtml',
   standalone: true,
   imports: [CommonModule, RouterLink, VertnavComponent, ClipboardModule],
-  templateUrl: './inputtype.component.html',
+  templateUrl: './svginhtml.component.html',
 })
-export class InputtypeComponent {
+export class SvginhtmlComponent {
   isDark: boolean = false;
   ismenuo = false
   constructor(private themeService: DarkthemeService, private menuService: MobilemenuService) {}
@@ -27,41 +27,11 @@ export class InputtypeComponent {
   mest() {
     this.menuService.cms();
   }
-  code1 = `<input 
-  type="text" 
-  name="username" 
-  placeholder="Enter your username"
->`
-code2 = `<input 
-  type="password" 
-  name="password" 
-  placeholder="Enter your password"
->`
-code3 = `<input 
-  type="radio" 
-  id="male" 
-  name="gender" 
-  value="male"
->
-<label for="male">
-  Male
-</label>
-<input
-  type="radio" 
-  id="female" 
-  name="gender" 
-  value="female"
->
-<label for="female">
-  Female
-</label>`
-code4 = `<input 
-  type="checkbox" 
-  id="subscribe" 
-  name="subscribe" 
-  value="yes"
->
-<label for="subscribe">
-  Subscribe to newsletter
-</label>`
+  code1 = `<svg height="100" width="100">
+    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+</svg>`
+code2 = `<img src="image.svg" alt="Sample SVG">`
+code3 = `.background {
+  background-image: url('image.svg');
+}`
 }

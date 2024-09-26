@@ -24,11 +24,17 @@ import { TableComponent } from './courses/html/18_table/table.component';
 import { MoreontableComponent } from './courses/html/19_moreontable/moreontable.component';
 import { FormsintroductionComponent } from './courses/html/20_formsintroduction/formsintroduction.component';
 import { InputtypeComponent } from './courses/html/21_inputtype/inputtype.component';
+import { TextareaandselectComponent } from './courses/html/22_textareaandselect/textareaandselect.component';
+import { MoreonformsComponent } from './courses/html/23_moreonforms/moreonforms.component';
+import { VideoandaudioatgComponent } from './courses/html/24_videoandaudioatg/videoandaudioatg.component';
+import { SvginhtmlComponent } from './courses/html/25_svginhtml/svginhtml.component';
+import { IframeComponent } from './courses/html/26_iframe/iframe.component';
 
 export const routes: Routes = [
     {path:'', component:HomeComponent},
     {path:'about', component:AboutComponent},
     {path:'courses', component:CoursesComponent},
+    { path: 'courses/html', redirectTo: 'courses/html/htmlintro', pathMatch: 'full' },
     {path:'courses/html/htmlintro', component:HtmlintroductionComponent},
     {path:'courses/html/htmlexecution', component:HtmlexecutionComponent},
     {path:'courses/html/htmlelement', component:HtmlelementComponent},
@@ -50,5 +56,10 @@ export const routes: Routes = [
     {path:'courses/html/moreontables', component:MoreontableComponent},
     {path:'courses/html/formsintroduction', component:FormsintroductionComponent},
     {path:'courses/html/inputtype', component:InputtypeComponent},
+    {path:'courses/html/textarea_and_select', component:TextareaandselectComponent},
+    {path:'courses/html/more_on_forms', component:MoreonformsComponent},
+    {path:'courses/html/video_and_audio_tag', component:VideoandaudioatgComponent},
+    {path:'courses/html/svg', component:SvginhtmlComponent},
+    {path:'courses/html/iframes', component:IframeComponent},
     { path: '**', component:PnfComponent  }
 ];

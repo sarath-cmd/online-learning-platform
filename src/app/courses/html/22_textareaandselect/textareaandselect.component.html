@@ -1,0 +1,77 @@
+<section class="flex md:hidden" *ngIf="!ismenuo" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <p class="flex pr-3">Course Menu:</p>
+    <button (click)="mest()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+        </svg>              
+    </button>
+</section>
+<section class="flex md:hidden pr-3 justify-end" *ngIf="ismenuo" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <button (click)="mest()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>                        
+    </button>
+</section>
+<section class="flex" [ngClass]="isDark ? 'dark:text-white dark:bg-[rgb(15,15,17)]' : 'bg-white text-black'">
+    <app-vertnav></app-vertnav>
+    <div *ngIf="!ismenuo" class="pl-3 py-3 w-full md:border-l-2" [ngClass]="isDark ? 'border-gray-200' : 'border-black'">
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Textarea & Select</h1>
+        <p class="px-3 2xl:text-lg">
+            In addition to the basic input types, HTML forms offer other controls like textarea and select for richer user interaction. These elements allow for more complex data collection and provide a better user experience.
+        </p>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">The Textarea Element</h1>
+        <p class="px-3 2xl:text-lg">
+            The textarea element is used when you need multiline text input from the user. This is particularly useful for comments, reviews, or any other type of input where the length is unpredictable.
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5 max-h-[60vh] overflow-scroll overflow-x-hidden">{{ code1 }}</pre>
+            <button [cdkCopyToClipboard]="code1" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <p class="px-3 2xl:text-lg">
+            The rows and cols attributes define the visible dimensions of the textarea.
+        </p>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">The Select Element</h1>
+        <p class="px-3 2xl:text-lg">
+            The select element creates a dropdown menu for the user. It is useful when you have a predefined list of options for the user to choose from.
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5 max-h-[60vh] overflow-scroll overflow-x-hidden">{{ code2 }}</pre>
+            <button [cdkCopyToClipboard]="code2" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <p class="px-3 2xl:text-lg">
+            Each option inside the select tag represents an item in the dropdown list.
+        </p>
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Combining Textarea and Select</h1>
+        <p class="px-3 2xl:text-lg">
+            You can combine textarea and select in the same form to capture varied types of user input.
+        </p>
+        <div class="2xl:text-lg" [ngClass]="isDark ? 'dark:text-white dark:bg-gray-800' : 'bg-gray-300 text-black'" class="mx-5 my-3 relative">
+            <pre class="p-5 pl-0 sm:pl-5 max-h-[60vh] overflow-scroll overflow-x-hidden">{{ code3 }}</pre>
+            <button [cdkCopyToClipboard]="code3" class="absolute top-0 right-0 p-5 bg-black text-white">Copy</button>
+        </div>
+        <img src="images/HTML/textarea&select.png" class="mt-4 h-[30vh] sm:ml-5">
+        <h1 class="font-bold sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl pt-5 text-purple-500">Conclusion</h1>
+        <p class="px-3 2xl:text-lg">
+            The textarea and select elements add another layer of interactivity to HTML forms, allowing for more complex and useful data collection. Understanding how to use these elements effectively can greatly enhance your web application's user interface.
+        </p>
+        <div class="flex justify-between mx-5 my-10">
+            <a [routerLink]="['/courses/html/inputtype']">
+                <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                    Previous
+                </button>
+            </a>
+            <a [routerLink]="['/courses/html/more_on_forms']">
+                <button class="flex p-2" [ngClass]="isDark ? 'text-black bg-purple-500' : 'bg-gray-800 text-white'">
+                    Next
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>                  
+                </button>
+            </a>
+        </div>
+    </div>
+</section>
